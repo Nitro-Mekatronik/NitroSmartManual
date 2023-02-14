@@ -2182,10 +2182,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "en/getting-started/_static/admin-area-overview/dashboard.png",
+      "source_relative_path": "NitroSmartManual/en/getting-started/_static/admin-area-overview/dashboard.png",
       "output": {
         "resource": {
-          "relative_path": "en/getting-started/_static/admin-area-overview/dashboard.png"
+          "relative_path": "NitroSmartManual/en/getting-started/_static/admin-area-overview/dashboard.png"
         }
       },
       "is_incremental": false,

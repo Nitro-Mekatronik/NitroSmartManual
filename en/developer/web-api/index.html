@@ -95,11 +95,11 @@
 <h1 id="web-api-documentation">Web API documentation</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p><a href="https://www.nopcommerce.com/web-api">Web API</a> for nopCommerce provides access to all platform functions as well as full control over database entities. It is a RESTful API built according to the <a href="https://swagger.io/">OpenAPI 3.0 specification (OAS)</a>. Using a tool like Swagger UI or within the <a href="https://swagger.io/tools/swaggerhub/">SwaggerHub platform</a> you can convert your OAS contract into an interactive API console that developers can use to interact with the API and quickly learn how the API is supposed to behave. nopCommerce offers a suite of APIs that allow developers to use and extend the platform’s built-in features. These APIs allow developers to read and write merchant data, interoperate with other systems and platforms, and add new functionality to nopCommerce.</p>
+<p><a href="https://www.nopcommerce.com/web-api">Web API</a> for NitroSmart provides access to all platform functions as well as full control over database entities. It is a RESTful API built according to the <a href="https://swagger.io/">OpenAPI 3.0 specification (OAS)</a>. Using a tool like Swagger UI or within the <a href="https://swagger.io/tools/swaggerhub/">SwaggerHub platform</a> you can convert your OAS contract into an interactive API console that developers can use to interact with the API and quickly learn how the API is supposed to behave. NitroSmart offers a suite of APIs that allow developers to use and extend the platform’s built-in features. These APIs allow developers to read and write merchant data, interoperate with other systems and platforms, and add new functionality to NitroSmart.</p>
 <h2 id="available-apis-method-coverage">Available APIs (method coverage)</h2>
-<p>The Web API framework provides integrators and developers the means to use web services that communicate with the nopCommerce system.</p>
+<p>The Web API framework provides integrators and developers the means to use web services that communicate with the NitroSmart system.</p>
 <h3 id="frontend-methods">Frontend methods</h3>
-<p>The Web API Frontend offers you a way to implement the nopCommerce buying capabilities in any application, whenever it is a website or mobile app. Using the API is essential when sellers want to reach a wider audience and their requirements go beyond the standard nopCommerce functionality. The Web API Frontend provides methods that allow using the built-in public store functionality outside of the nopCommerce store. Even if you have customizations in your nopCommerce store you will be able to use this plugin since it is provided with the source code.</p>
+<p>The Web API Frontend offers you a way to implement the NitroSmart buying capabilities in any application, whenever it is a website or mobile app. Using the API is essential when sellers want to reach a wider audience and their requirements go beyond the standard NitroSmart functionality. The Web API Frontend provides methods that allow using the built-in public store functionality outside of the NitroSmart store. Even if you have customizations in your NitroSmart store you will be able to use this plugin since it is provided with the source code.</p>
 <p>After installing the plugin you will be able to see a list of the existing API methods using the following Swagger UI endpoint:
 <strong><code>{store location}/api/index.html</code></strong></p>
 <div class="TIP">
@@ -107,7 +107,7 @@
 <p>You can't use multi-factor authentication (MFA) through the Frontend API.</p>
 </div>
 <h3 id="backend-methods">Backend methods</h3>
-<p>The Web API Backend provides access to all nopCommerce admin area functionality. Meaning, using the Web API Backend methods you can get full control over such functionality as customer management, creating and updating products, sales monitoring, and actually whatever you want to control in the admin area of the nopCommerce store. Use this API to build such applications as CRM and ERP systems, social network integrations, and other apps that require accessing the store business processes.</p>
+<p>The Web API Backend provides access to all NitroSmart admin area functionality. Meaning, using the Web API Backend methods you can get full control over such functionality as customer management, creating and updating products, sales monitoring, and actually whatever you want to control in the admin area of the NitroSmart store. Use this API to build such applications as CRM and ERP systems, social network integrations, and other apps that require accessing the store business processes.</p>
 <p>After installing the plugin you will be able to see a list of the existing API methods using the following Swagger UI endpoint:
 <strong><code>{store location}/api/index.html</code></strong></p>
 <div class="IMPORTANT">
@@ -116,9 +116,9 @@
 <img src="static/index/SwaggerUI_1.png" alt="image"></p>
 </div>
 <h4 id="scopes-and-permissions">Scopes and permissions</h4>
-<p>To use the API, the client application should have appropriate permissions (ACL) in a nopCommerce store where the API plugin is installed. For example, to access backend (admin panel) methods through the API, a special &quot;Access Web API Backend&quot; permission is required. By default, this permission is provided for the administrator role only. You can change these settings through the standard ACL used in nopCommerce.</p>
+<p>To use the API, the client application should have appropriate permissions (ACL) in a NitroSmart store where the API plugin is installed. For example, to access backend (admin panel) methods through the API, a special &quot;Access Web API Backend&quot; permission is required. By default, this permission is provided for the administrator role only. You can change these settings through the standard ACL used in NitroSmart.</p>
 <h2 id="authentication">Authentication</h2>
-<p>To keep transactions on the nopCommerce platform safe and secure, all apps connecting with our APIs must authenticate when making API calls.</p>
+<p>To keep transactions on the NitroSmart platform safe and secure, all apps connecting with our APIs must authenticate when making API calls.</p>
 <p>To make a web API call from a client such as a mobile application, an API client has to prove its identity. To do this, the API provides an access token with each request in the Authorization header using the Bearer HTTP authorization scheme. This token acts like an electronic key that lets you access the API.</p>
 <p>After you install the Web API plugin, you need to generate a secret key on the plugin configuration page. This key will be used to sign and verify each JWT token.</p>
 <h3 id="request-a-token">Request a token</h3>
@@ -134,7 +134,7 @@
 <p>The content type of the request body. Set this value to either <code>Content-Type:application/json-patch+json</code></p>
 </li>
 <li><p>Credentials</p>
-<p>The username and password for a nopCommerce account. To specify these credentials in a JSON request body, include code similar to the following in the call:</p>
+<p>The username and password for a NitroSmart account. To specify these credentials in a JSON request body, include code similar to the following in the call:</p>
 <pre><code class="lang-json">{
     &quot;username&quot;:&quot;&lt;user name&gt;&quot;, 
     &quot;email&quot;:&quot;&lt;Email&gt;&quot;, 
@@ -209,7 +209,7 @@ Here's a screenshot of Postman after making an authenticated request to get a to
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/installation-and-upgrading/installing-nopcommerce/installing-on-linux">
 <h1 id="installing-on-linux">Installing on Linux</h1>
 
-<p>This chapter describes how to install the nopCommerce software on Linux system on the example of <em>Xubuntu 20.04</em>:</p>
+<p>This chapter describes how to install the NitroSmart software on Linux system on the example of <em>Xubuntu 20.04</em>:</p>
 <ul>
 <li><a href="#installing-on-linux">Installing on Linux</a>
 <ul>
@@ -106,8 +106,8 @@
 <li><a href="#install-nginx">Install nginx</a></li>
 </ul>
 </li>
-<li><a href="#get-nopcommerce">Get nopCommerce</a></li>
-<li><a href="#create-the-nopcommerce-service">Create the nopCommerce service</a></li>
+<li><a href="#get-nopcommerce">Get NitroSmart</a></li>
+<li><a href="#create-the-nopcommerce-service">Create the NitroSmart service</a></li>
 <li><a href="#installation-process">Installation process</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a>
 <ul>
@@ -127,7 +127,7 @@
 
 sudo dpkg -i packages-microsoft-prod.deb
 </code></pre>
-<p><img src="static/installing-on-linux/register_key.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/register_key.jpg" alt="NitroSmart installation"></p>
 <h3 id="install-the-net-core-runtime">Install the .NET Core Runtime</h3>
 <p>Update the products available for installation, then install the .NET runtime:</p>
 <pre><code class="lang-cmd">sudo apt-get update
@@ -145,11 +145,11 @@ sudo apt-get install -y apt-transport-https aspnetcore-runtime-7.0
 <p>Install the MySql server 8.0 version:</p>
 <pre><code class="lang-cmd">sudo apt-get install mysql-server
 </code></pre>
-<p><img src="static/installing-on-linux/install_mysql.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/install_mysql.jpg" alt="NitroSmart installation"></p>
 <p>By default, the root password is empty; let's set it:</p>
 <pre><code class="lang-cmd">sudo /usr/bin/mysql_secure_installation
 </code></pre>
-<p><img src="static/installing-on-linux/config_mysql.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/config_mysql.jpg" alt="NitroSmart installation"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you have a problem with configuring root password on your MySql server, please read the following articles:
@@ -160,14 +160,14 @@ sudo apt-get install -y apt-transport-https aspnetcore-runtime-7.0
 <p>Install the nginx package:</p>
 <pre><code class="lang-cmd">sudo apt-get install nginx
 </code></pre>
-<p><img src="static/installing-on-linux/Install_nginx.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/Install_nginx.jpg" alt="NitroSmart installation"></p>
 <p>Run the nginx service:</p>
 <pre><code class="lang-cmd">sudo systemctl start nginx
 </code></pre>
 <p>and check its status:</p>
 <pre><code class="lang-cmd">sudo systemctl status nginx
 </code></pre>
-<p><img src="static/installing-on-linux/status_nginx.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/status_nginx.jpg" alt="NitroSmart installation"></p>
 <p>To configure nginx as a reverse proxy to forward requests to your ASP.NET Core app, modify /etc/nginx/sites-available/default. Open it in a text editor and replace the contents with the following:</p>
 <pre><code class="lang-cmd"># Default server configuration
 #
@@ -175,7 +175,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
-    server_name   nopCommerce.com;
+    server_name   NitroSmart.com;
 
     location / {
     proxy_pass         http://localhost:5000;
@@ -205,41 +205,41 @@ server {
     # include snippets/snakeoil.conf;
 }
 </code></pre>
-<h2 id="get-nopcommerce">Get nopCommerce</h2>
+<h2 id="get-nopcommerce">Get NitroSmart</h2>
 <p>Create a directory:</p>
-<pre><code class="lang-cmd">mkdir /var/www/nopCommerce
+<pre><code class="lang-cmd">mkdir /var/www/NitroSmart
 </code></pre>
-<p>Download and unpack nopCommerce:</p>
-<pre><code class="lang-cmd">cd /var/www/nopCommerce
+<p>Download and unpack NitroSmart:</p>
+<pre><code class="lang-cmd">cd /var/www/NitroSmart
 
-sudo wget https://github.com/nopSolutions/nopCommerce/releases/download/release-4.60.2/nopCommerce_4.60.2_NoSource_linux_x64.zip
+sudo wget https://github.com/nopSolutions/NitroSmart/releases/download/release-4.60.2/NitroSmart_4.60.2_NoSource_linux_x64.zip
 
 sudo apt-get install unzip
 
-sudo unzip nopCommerce_4.60.2_NoSource_linux_x64.zip
+sudo unzip NitroSmart_4.60.2_NoSource_linux_x64.zip
 </code></pre>
-<p>Create couple directories to run nopCommerce:</p>
+<p>Create couple directories to run NitroSmart:</p>
 <pre><code class="lang-cmd">sudo mkdir bin
 sudo mkdir logs
 </code></pre>
 <p>Change the file permissions:</p>
 <pre><code class="lang-cmd">cd ..
-sudo chgrp -R www-data nopCommerce/
-sudo chown -R www-data nopCommerce/
+sudo chgrp -R www-data NitroSmart/
+sudo chown -R www-data NitroSmart/
 </code></pre>
-<h2 id="create-the-nopcommerce-service">Create the nopCommerce service</h2>
-<p>Create the <em>/etc/systemd/system/nopCommerce.service</em> file with the following contents:</p>
+<h2 id="create-the-nopcommerce-service">Create the NitroSmart service</h2>
+<p>Create the <em>/etc/systemd/system/NitroSmart.service</em> file with the following contents:</p>
 <pre><code class="lang-cmd">[Unit]
-Description=Example nopCommerce app running on Xubuntu
+Description=Example NitroSmart app running on Xubuntu
 
 [Service]
-WorkingDirectory=/var/www/nopCommerce
-ExecStart=/usr/bin/dotnet /var/www/nopCommerce/Nop.Web.dll
+WorkingDirectory=/var/www/NitroSmart
+ExecStart=/usr/bin/dotnet /var/www/NitroSmart/Nop.Web.dll
 Restart=always
 # Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
 KillSignal=SIGINT
-SyslogIdentifier=nopCommerce-example
+SyslogIdentifier=NitroSmart-example
 User=www-data
 Environment=ASPNETCORE_ENVIRONMENT=Production
 Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
@@ -248,18 +248,18 @@ Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 WantedBy=multi-user.target
 </code></pre>
 <p>Start the service:</p>
-<pre><code class="lang-cmd">sudo systemctl start nopCommerce.service
+<pre><code class="lang-cmd">sudo systemctl start NitroSmart.service
 </code></pre>
-<p>Check the nopCommerce service status:</p>
-<pre><code class="lang-cmd">sudo systemctl status nopCommerce.service
+<p>Check the NitroSmart service status:</p>
+<pre><code class="lang-cmd">sudo systemctl status NitroSmart.service
 </code></pre>
-<p><img src="static/installing-on-linux/status_nopCommerce.png" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/status_NitroSmart.png" alt="NitroSmart installation"></p>
 <p>Restart the nginx server:</p>
 <pre><code class="lang-cmd">sudo systemctl restart nginx
 </code></pre>
 <p>Now that everything is ready, you can proceed to install and configure the store.</p>
 <h2 id="installation-process">Installation process</h2>
-<p>The further installation process for nopCommerce is the same as the installation process on Windows; you can see the instruction following <a class="xref" href="installing-on-windows.html#install-nopcommerce">this link</a>.</p>
+<p>The further installation process for NitroSmart is the same as the installation process on Windows; you can see the instruction following <a class="xref" href="installing-on-windows.html#install-nopcommerce">this link</a>.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="gdip">Gdip</h3>
 <p><em>If you have a problem with loading images in the RichText Box (The type initializer for 'Gdip' threw an exception), just install the libgdiplus library</em>:</p>
@@ -269,7 +269,7 @@ WantedBy=multi-user.target
 <p><em>If you want to use SSL on your site, don't forget to set the <code>UseProxy</code> setting to <strong><code>true</code></strong> in the <strong>appsettings.json</strong> file</em>.</p>
 <h2 id="see-also">See also</h2>
 <ul>
-<li><a href="https://www.nopcommerce.com/running-nopcommerce-on-linux-vps-part-2">Running nopCommerce on Linux VPS. Part 2</a></li>
+<li><a href="https://www.nopcommerce.com/running-nopcommerce-on-linux-vps-part-2">Running NitroSmart on Linux VPS. Part 2</a></li>
 </ul>
             </article>
           </div>

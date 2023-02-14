@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/installation-and-upgrading/installing-nopcommerce/installing-on-microsoft-azure">
 <h1 id="installing-on-microsoft-azure">Installing on Microsoft Azure</h1>
 
-<p>There are three ways to deploy nopCommerce on Microsoft Azure:</p>
+<p>There are three ways to deploy NitroSmart on Microsoft Azure:</p>
 <ol>
 <li><p><strong>FTP</strong>. Use this method if you already have a package ready to deploy (no source code). You can publish to a local file system, then upload the published files through FTP.
 How to get FTP credentials for Azure? You should go to <strong><a href="https://azure.microsoft.com/">Azure.com</a> → My Account → Management portal → Choose your website → go to Dashboard → quick glance</strong>. Here, you can find the FTP credentials or <em>Reset your deployment credentials</em> or <em>Download the publish profile</em>.
@@ -102,14 +102,14 @@ For the new Azure portal, go to <a href="http://portal.azure.com/">portal.azure.
 </li>
 <li><p><strong>Visual Studio</strong> - web deploy. You can also deploy directly to Azure from <em>Visual Studio</em>. Download or get the deployment credentials from Azure using the method above and setup a web deploy profile in <em>Visual Studio</em>.</p>
 </li>
-<li><p><strong>Web platform installer</strong>. nopCommerce is available in the Azure Web Sites application gallery. So go to Azure portal, click &quot;<em>start, new site, from gallery</em>&quot;.  Select nopCommerce from the list of available applications. After you enter your database connection information and click <em><code>OK</code></em>, nopCommerce will be ready to launch.</p>
+<li><p><strong>Web platform installer</strong>. NitroSmart is available in the Azure Web Sites application gallery. So go to Azure portal, click &quot;<em>start, new site, from gallery</em>&quot;.  Select NitroSmart from the list of available applications. After you enter your database connection information and click <em><code>OK</code></em>, NitroSmart will be ready to launch.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If you get the error &quot;HTTP Error 500.32 - ANCM Failed to Load dll,&quot; it might be that the platform has to be changed to 64bit (through Azure: <strong>App Settings - Settings - Configuration - General settings - Platform settings - Platform</strong>).</p>
 </div>
 </li>
 </ol>
-<p>Once the site is deployed, you have to install nopCommerce. Please read more about it <a class="xref" href="index.html">here</a>.</p>
+<p>Once the site is deployed, you have to install NitroSmart. Please read more about it <a class="xref" href="index.html">here</a>.</p>
 <p>Azure has support for multiple instances since version 3.70. It's great for any application scalability. Now you should not worry about whether your site can handle many visitors. So what exactly has been done to support multiple instances in Azure and web farms?</p>
 <ul>
 <li><strong>BLOB storage account support in Microsoft Azure</strong>. Please learn more about storage accounts in Azure <a href="https://azure.microsoft.com/documentation/articles/storage-introduction/">here</a>. <em>How to configure:</em>
@@ -120,7 +120,7 @@ For the new Azure portal, go to <a href="http://portal.azure.com/">portal.azure.
 <li><strong>Distributed caching and session management support</strong>. Supported options are SQL Server and Redis. To configure SQL Server, see <a href="https://docs.nopcommerce.com/en/developer/tutorials/appsettings-json-file.html#distributedcacheconfig">DistributedCacheConfig</a> section for more details. Following description assumes that <a href="http://redis.io/">Redis</a> has been chosen as a caching server (already available in Azure, Amazon, other cloud hosting companies). <em>How to configure:</em>
 <ul>
 <li>First, you have to install and setup Redis. Please find more about how to use Redis in Azure <a href="https://azure.microsoft.com/documentation/articles/cache-dotnet-how-to-use-azure-redis-cache/">here</a>.</li>
-<li>Once it's done you have to configure it in nopCommerce. In order to enable caching in Redis open <code>appsettings.json</code> file. Find the <strong>DistributedCacheConfig</strong> config section. There, set <strong>DistributedCacheType</strong> to Redis and <strong>Enabled</strong> to <em><code>true</code></em> and then specify <strong>ConnectionString</strong> pointing to your Redis server (configured in the first step).</li>
+<li>Once it's done you have to configure it in NitroSmart. In order to enable caching in Redis open <code>appsettings.json</code> file. Find the <strong>DistributedCacheConfig</strong> config section. There, set <strong>DistributedCacheType</strong> to Redis and <strong>Enabled</strong> to <em><code>true</code></em> and then specify <strong>ConnectionString</strong> pointing to your Redis server (configured in the first step).</li>
 <li>For version 3.90 (and below), you also have to enable Redis as our distributed session management. Please open the <code>web.config</code> file. Find and uncomment the <strong>sessionState</strong> element. Specify its attributes (such as <em>host</em>, <em>accessKey</em>, etc.) pointing to your Redis server.</li>
 </ul>
 </li>
@@ -129,7 +129,7 @@ For the new Azure portal, go to <a href="http://portal.azure.com/">portal.azure.
 <li><strong>UsePluginsShadowCopy</strong> - set it to <em><code>false</code></em> to prevent the problem with IIS pool recycle and horizontal scaling.</li>
 </ul>
 </li>
-<li>Ensure that the nopCommerce schedule tasks are run on one instance at a time. To configure this :
+<li>Ensure that the NitroSmart schedule tasks are run on one instance at a time. To configure this :
 <ul>
 <li>For version 3.90 (and below), open the <code>web.config</code> file, find the <strong>WebFarms</strong> element, and set its <strong>MultipleInstancesEnabled</strong> attribute to <em><code>true</code></em>. If you use Microsoft Azure Websites (not cloud services), then set the <strong>RunOnAzureWebsites</strong> attribute to <em><code>true</code></em> as well.</li>
 <li>For newer versions no configuration change is required because the task runner uses the distributed cache to ensure that tasks will run on one instance at a time.</li>
@@ -137,7 +137,7 @@ For the new Azure portal, go to <a href="http://portal.azure.com/">portal.azure.
 </li>
 </ul>
 <h2 id="installation-process">Installation process</h2>
-<p>The further installation process for nopCommerce is the same as the installation process on Windows; you can see the instruction following <a class="xref" href="installing-on-windows.html#install-nopcommerce">this link</a>.</p>
+<p>The further installation process for NitroSmart is the same as the installation process on Windows; you can see the instruction following <a class="xref" href="installing-on-windows.html#install-nopcommerce">this link</a>.</p>
 <h2 id="web-farms">Web farms</h2>
 <p>You can also configure load balancing with IIS web farms. Please read more about it <a class="xref" href="web-farms.html">here</a>.</p>
             </article>

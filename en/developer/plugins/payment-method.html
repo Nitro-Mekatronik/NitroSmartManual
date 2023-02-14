@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/developer/plugins/payment-method">
 <h1 id="how-to-code-my-payment-method">How to code my payment method</h1>
 
-<p>Payment methods are implemented as plugins in nopCommerce. We recommend you read <a class="xref" href="how-to-write-plugin-4.60.html">How to write a plugin for nopCommerce 4.60</a> before you start coding a new payment method. It will explain to you what the required steps are for creating a plugin.</p>
+<p>Payment methods are implemented as plugins in NitroSmart. We recommend you read <a class="xref" href="how-to-write-plugin-4.60.html">How to write a plugin for NitroSmart 4.60</a> before you start coding a new payment method. It will explain to you what the required steps are for creating a plugin.</p>
 <p>So actually a payment method is an ordinary plugin that implements an <strong><code>IPaymentMethod</code></strong> interface (<em>Nop.Services.Payments namespace</em>). As you already guessed <em>IPaymentMethod</em> interface is used for creating payment method plugins. It contains some methods which are specific only for payment methods such as <code>ProcessPaymentAsync()</code> or <code>GetAdditionalHandlingFeeAsync()</code>. So, add a new payment plugin project (<em>class library</em>) to the solution, and let's get started.</p>
 <h2 id="controllers-views-models">Controllers, views, models</h2>
 <p>The first thing you need to do is create a controller. This controller is responsible for responding to requests made against an ASP.NET MVC website.</p>
@@ -192,7 +192,7 @@
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

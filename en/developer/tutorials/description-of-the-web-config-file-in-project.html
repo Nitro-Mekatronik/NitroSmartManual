@@ -97,8 +97,8 @@
 <h2 id="what-is-the-webconfig-file">What is the web.config file</h2>
 <p><code>web.config</code> file is an XML-based configuration file used in ASP.NET-based applications to manage various settings that are concerned with the configuration of our website. In this way, we can separate our application logic from configuration logic. And the main benefit of this is, if we want to change some configuration settings then we do not need to restart our application to apply new changes, ASP.NET automatically detects the changes and applies them to the running ASP.NET application.</p>
 <p>The ASP.NET framework uses a hierarchical configuration system. You can place a <code>web.config</code> file in any subdirectory of an application. The file then applies to any pages located in the same directory or any subdirectories.</p>
-<h2 id="webconfig-for-nopcommerce">web.config for nopCommerce</h2>
-<p>nopCommerce uses the <code>web.config</code> in the <code>Nop.Web</code> project which can be found inside the Presentation directory. In the root of the project directory, you can see a web.config file. If your solution is fresh installation of nopCommerce then the content of that file looks something like this:</p>
+<h2 id="webconfig-for-nopcommerce">web.config for NitroSmart</h2>
+<p>NitroSmart uses the <code>web.config</code> in the <code>Nop.Web</code> project which can be found inside the Presentation directory. In the root of the project directory, you can see a web.config file. If your solution is fresh installation of NitroSmart then the content of that file looks something like this:</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;configuration&gt;
     &lt;system.webServer&gt;
@@ -153,7 +153,7 @@
 </code></pre>
 <p>The <code>&lt;modules&gt;</code> element defines the native-code modules and managed-code modules that are registered for an application. We commonly use modules to implement customized functionality.</p>
 <p>The <code>&lt;modules&gt;</code> element contains a collection of <code>&lt;add&gt;</code>, <code>&lt;remove&gt;</code> and <code>&lt;clear&gt;</code> elements.</p>
-<p>Here nopCommerce is using the <code>&lt;remove&gt;</code> element to remove the WebDAVModule module from the application.</p>
+<p>Here NitroSmart is using the <code>&lt;remove&gt;</code> element to remove the WebDAVModule module from the application.</p>
 <pre><code class="lang-xml">&lt;handlers&gt;
     &lt;!-- Remove WebDAV module so that we can make DELETE requests --&gt;
     &lt;remove name=&quot;WebDAV&quot; /&gt;
@@ -227,7 +227,7 @@
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

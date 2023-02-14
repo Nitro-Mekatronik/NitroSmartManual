@@ -95,17 +95,17 @@
 <h1 id="description-of-plugin-system">Description of plugin system</h1>
 
 <h2 id="how-to-initialize-a-new-plugin-system-how-to-create-a-new-plugin-project">How to initialize a new Plugin system (How to create a new plugin project)</h2>
-<p>nopCommerce uses a plugins system to extend the functionality of the nopCommerce store. Plugins are a set of independent programs or components that can be added to an existing system to extend some specific functionality and also can be removed from the system without affecting the main system during the process.</p>
+<p>NitroSmart uses a plugins system to extend the functionality of the NitroSmart store. Plugins are a set of independent programs or components that can be added to an existing system to extend some specific functionality and also can be removed from the system without affecting the main system during the process.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>For more information about how to create a plugin you can visit <a class="xref" href="../plugins/index.html"><strong>this page</strong>.</a></p>
 </div>
-<h2 id="how-to-search-and-use-plugins-from-the-nopcommerce-store">How to Search and use plugins from the nopCommerce store</h2>
-<p>nopCommerce already has several plugins pre-built and available to use out of the box. You can also search and find several plugins already available from the nopCommerce official store and see if someone has already created a plugin that suits your needs. If not then you always can build your won plugin according to your requirement. But here let's see how to find and use plugins from the nopCommerce store. For that nopCommerce has a marketplace where we can find different themes and plugins. You can visit to go to the <a href="https://www.nopcommerce.com/marketplace">nopCommerce Marketplace</a>.</p>
+<h2 id="how-to-search-and-use-plugins-from-the-nopcommerce-store">How to Search and use plugins from the NitroSmart store</h2>
+<p>NitroSmart already has several plugins pre-built and available to use out of the box. You can also search and find several plugins already available from the NitroSmart official store and see if someone has already created a plugin that suits your needs. If not then you always can build your won plugin according to your requirement. But here let's see how to find and use plugins from the NitroSmart store. For that NitroSmart has a marketplace where we can find different themes and plugins. You can visit to go to the <a href="https://www.nopcommerce.com/marketplace">NitroSmart Marketplace</a>.</p>
 <p><img src="static/description-of-plugin-system/image4.png" alt="image4"></p>
-<p>Here you can see three tabs. <strong>All</strong> tab contains all themes and extensions, <strong>Themes</strong> tab contains all nopCommerce themes which are for nopCommerce website skin, and lastly <strong>Extensions</strong> tab where we can find plugins. So go to the Extensions tab. Here you can find all free and commercial plugins. To find a specific plugin you want, you can search from here. On the right side, you can find the filtration section from where you can narrow down your filtering. After you find your searched plugin just download and install. Each plugin has a full description about how to use the plugin, on its download page, so don't forget to read those descriptions.</p>
+<p>Here you can see three tabs. <strong>All</strong> tab contains all themes and extensions, <strong>Themes</strong> tab contains all NitroSmart themes which are for NitroSmart website skin, and lastly <strong>Extensions</strong> tab where we can find plugins. So go to the Extensions tab. Here you can find all free and commercial plugins. To find a specific plugin you want, you can search from here. On the right side, you can find the filtration section from where you can narrow down your filtering. After you find your searched plugin just download and install. Each plugin has a full description about how to use the plugin, on its download page, so don't forget to read those descriptions.</p>
 <h2 id="interface-iplugin">Interface <code>IPlugin</code></h2>
-<p><code>IPlugin</code> is an interface that exposes the functionalities used while installing or uninstalling the plugin. Every plugin project must have a class inherited from this interface for nopCommerce to treat that project as a plugin.</p>
+<p><code>IPlugin</code> is an interface that exposes the functionalities used while installing or uninstalling the plugin. Every plugin project must have a class inherited from this interface for NitroSmart to treat that project as a plugin.</p>
 <h3 id="method-getconfigurationpageurl">Method <code>GetConfigurationPageUrl</code></h3>
 <pre><code class="lang-cs">string GetConfigurationPageUrl()
 </code></pre>
@@ -113,7 +113,7 @@
 <h3 id="property-plugindescriptor">Property <code>PluginDescriptor</code></h3>
 <pre><code class="lang-cs">PluginDescriptor PluginDescriptor{ get; set; }
 </code></pre>
-<p>This property is used to get or set the information that describes the current plugin. When we write a new plugin or widget we need to create a <strong>plugin.json</strong> file. nopCommerce uses the same file to initialize the value for this property.</p>
+<p>This property is used to get or set the information that describes the current plugin. When we write a new plugin or widget we need to create a <strong>plugin.json</strong> file. NitroSmart uses the same file to initialize the value for this property.</p>
 <h3 id="method-installasync">Method <code>InstallAsync</code></h3>
 <pre><code class="lang-cs">Task InstallAsync();
 </code></pre>
@@ -129,13 +129,13 @@
 <h3 id="method-prepareplugintouninstallasync">Method <code>PreparePluginToUninstallAsync</code></h3>
 <pre><code class="lang-cs">Task PreparePluginToUninstallAsync()
 </code></pre>
-<p>This method will be invoked when we click the <code>UninstallAsync</code> button for the plugin. Code inside this method will be executed before the nopCommerce uninstalls the plugin from the system. In this method, we may want to write the logic to validate our plugin from uninstallation. For example, here we can check if there are other plugins which are depending on the plugin we are trying to uninstall. If so we may not want users to uninstall the plugin until the plugin depending on the current plugin is uninstalled.</p>
+<p>This method will be invoked when we click the <code>UninstallAsync</code> button for the plugin. Code inside this method will be executed before the NitroSmart uninstalls the plugin from the system. In this method, we may want to write the logic to validate our plugin from uninstallation. For example, here we can check if there are other plugins which are depending on the plugin we are trying to uninstall. If so we may not want users to uninstall the plugin until the plugin depending on the current plugin is uninstalled.</p>
 <h2 id="class-plugindescriptor">Class <code>PluginDescriptor</code></h2>
-<p>This class as the name implies holds the information that describes the plugin. If you compare the <em>properties</em> from this class to <em>key</em> from the <strong>plugin.json</strong> file, you will see a similar structure. That is because this class <strong>PluginDescriptor.cs</strong> is used to map that <strong>plugin.json</strong> file to C# class so that the information provided in <strong>plugin.json</strong> can be used by nopCommerce. Except for those properties <code>PluginDescriptor</code> class contains some more properties and helper methods.</p>
+<p>This class as the name implies holds the information that describes the plugin. If you compare the <em>properties</em> from this class to <em>key</em> from the <strong>plugin.json</strong> file, you will see a similar structure. That is because this class <strong>PluginDescriptor.cs</strong> is used to map that <strong>plugin.json</strong> file to C# class so that the information provided in <strong>plugin.json</strong> can be used by NitroSmart. Except for those properties <code>PluginDescriptor</code> class contains some more properties and helper methods.</p>
 <h3 id="property-installed">Property <code>Installed</code></h3>
 <pre><code class="lang-cs">public virtual bool Installed { get; set; }
 </code></pre>
-<p>This property is used to verify if a plugin is installed in our nopCommerce application or not.</p>
+<p>This property is used to verify if a plugin is installed in our NitroSmart application or not.</p>
 <h3 id="property-plugintype">Property <code>PluginType</code></h3>
 <pre><code class="lang-cs">public virtual Type PluginType { get; set; }
 </code></pre>
@@ -175,7 +175,7 @@
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

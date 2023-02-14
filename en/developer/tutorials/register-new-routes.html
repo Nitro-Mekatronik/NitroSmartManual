@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/developer/tutorials/register-new-routes">
 <h1 id="register-new-routes">Register new routes</h1>
 
-<p><a href="https://docs.microsoft.com/aspnet/core/fundamentals/routing">ASP.NET Core routing</a> is responsible for mapping incoming browser requests to particular MVC controller actions. nopCommerce has an <code>IRouteProvider</code> interface which is used for route registration during application startup. All main routes are registered in the <code>RouteProvider</code> and <code>GenericUrlRouteProvider</code> classes located in the <em><code>Nop.Web</code></em> project.</p>
+<p><a href="https://docs.microsoft.com/aspnet/core/fundamentals/routing">ASP.NET Core routing</a> is responsible for mapping incoming browser requests to particular MVC controller actions. NitroSmart has an <code>IRouteProvider</code> interface which is used for route registration during application startup. All main routes are registered in the <code>RouteProvider</code> and <code>GenericUrlRouteProvider</code> classes located in the <em><code>Nop.Web</code></em> project.</p>
 <p>You can create as many <code>RouteProvider</code> classes as you need. For example, if your plugin has some custom routes which you want to register, then create a new class implementing the <code>IRouteProvider</code> interface and register the routes specific to your new plugin.</p>
 <pre><code class="lang-csharp">/// &lt;summary&gt;
 /// Represents plugin route provider
@@ -123,7 +123,7 @@ public class RouteProvider : IRouteProvider
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

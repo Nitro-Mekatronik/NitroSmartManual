@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Upgrading nopCommerce </title>
+    <title>Upgrading NitroSmart </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Upgrading nopCommerce ">
+    <meta name="title" content="Upgrading NitroSmart ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -92,9 +92,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="en/installation-and-upgrading/upgrading-nopcommerce">
-<h1 id="upgrading-nopcommerce">Upgrading nopCommerce</h1>
+<h1 id="upgrading-nopcommerce">Upgrading NitroSmart</h1>
 
-<p>This chapter describes how to upgrade nopCommerce to the <a href="https://www.nopcommerce.com/download-nopcommerce">latest</a> version. You might want to do this because you've seen a message at the nopCommerce news section of your dashboard telling you that a new release is available. nopCommerce doesn't support automatic upgrades, you have to do it manually.</p>
+<p>This chapter describes how to upgrade NitroSmart to the <a href="https://www.nopcommerce.com/download-nopcommerce">latest</a> version. You might want to do this because you've seen a message at the NitroSmart news section of your dashboard telling you that a new release is available. NitroSmart doesn't support automatic upgrades, you have to do it manually.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Since version 4.40 we don't use SQL upgrade scripts anymore. The upgrade is performed automatically with migrations (during the first application start). So when you upgrade from 4.30 to 4.40 you need to skip step 2 from the list below!</p>
@@ -102,7 +102,7 @@
 <p>Follow the next steps:</p>
 <ol>
 <li>Make a backup of everything on your site, including the database. This is extremely important so that you can roll back to a running site no matter what happens during migration.</li>
-<li><strong>[To upgrade to nopCommerce 4.30 and below]</strong> Then you have to execute SQL upgrade scripts. You have to execute them stepwise. For example, if your current version is 3.90 and the latest available version is 4.20, then you have to upgrade to 4.00, then to 4.10, and then to 4.20. So download the required upgrade scripts from the <a href="https://www.nopcommerce.com/download-nopcommerce">download nopCommerce</a> page. Once an upgrade script is downloaded, execute it over your database.</li>
+<li><strong>[To upgrade to NitroSmart 4.30 and below]</strong> Then you have to execute SQL upgrade scripts. You have to execute them stepwise. For example, if your current version is 3.90 and the latest available version is 4.20, then you have to upgrade to 4.00, then to 4.10, and then to 4.20. So download the required upgrade scripts from the <a href="https://www.nopcommerce.com/download-nopcommerce">download NitroSmart</a> page. Once an upgrade script is downloaded, execute it over your database.</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
@@ -115,11 +115,11 @@
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>As you deploy, make sure that the target <code>appsettings.json</code> is updated as per the latest nopCommerce version so that the production site continues to point to the production database. In earlier nopCommerce versions it can be <code>dataSettings.json</code> and <code>Settings.txt</code> files. Also, make sure that the <code>plugins.json</code> (<code>InstalledPlugins.txt</code>) file is also updated per the latest nopCommerce version.</p>
+<p>As you deploy, make sure that the target <code>appsettings.json</code> is updated as per the latest NitroSmart version so that the production site continues to point to the production database. In earlier NitroSmart versions it can be <code>dataSettings.json</code> and <code>Settings.txt</code> files. Also, make sure that the <code>plugins.json</code> (<code>InstalledPlugins.txt</code>) file is also updated per the latest NitroSmart version.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If you're upgrading nopCommerce to version 4.50 from one of the previous versions, please ensure that your connection string contains one of the following parameters: <code>Encrypt=false</code> or <code>TrustServerCertificate=True</code> (depending on your server requirements). You can manually add these parameters to your connection string in the \App_Data\appsettings.json file. This step is caused by the <code>Microsoft.Data.SqlClient</code> library that changed the default value of the <code>Encrypt</code> option from <code>false</code> to <code>true</code>.</p>
+<p>If you're upgrading NitroSmart to version 4.50 from one of the previous versions, please ensure that your connection string contains one of the following parameters: <code>Encrypt=false</code> or <code>TrustServerCertificate=True</code> (depending on your server requirements). You can manually add these parameters to your connection string in the \App_Data\appsettings.json file. This step is caused by the <code>Microsoft.Data.SqlClient</code> library that changed the default value of the <code>Encrypt</code> option from <code>false</code> to <code>true</code>.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
@@ -133,7 +133,7 @@
 <p>If you experience problems after the upgrade, you can always restore your backup and replace the files with ones from your previous version. You can always post a question on our <a href="https://www.nopcommerce.com/boards/">forums</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If when doing advanced search on our forums you cannot find what you need, then try a Google search focused into nopCommerce site: [your search words <strong>site:<a href="https://www.nopcommerce.com/" title="nopcommerce.com">nopcommerce.com</a></strong>].</p>
+<p>If when doing advanced search on our forums you cannot find what you need, then try a Google search focused into NitroSmart site: [your search words <strong>site:<a href="https://www.nopcommerce.com/" title="nopcommerce.com">nopcommerce.com</a></strong>].</p>
 </div>
             </article>
           </div>

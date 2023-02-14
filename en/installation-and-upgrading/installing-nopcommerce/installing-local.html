@@ -94,35 +94,35 @@
             <article class="content wrap" id="_content" data-uid="en/installation-and-upgrading/installing-nopcommerce/installing-local">
 <h1 id="installing-local">Installing local</h1>
 
-<p>This chapter describes how to download nopCommerce software, upload it to your server, define the file permissions, and install it on your system. You may also watch the screencast about nopCommerce installation on our <a href="https://www.youtube.com/watch?v=L7NGodeB9sQ">YouTube channel</a>.</p>
-<p>Before you begin the installation, ensure that your web host meets the <a class="xref" href="../technology-and-system-requirements.html">minimum requirements to run nopCommerce</a>.</p>
+<p>This chapter describes how to download NitroSmart software, upload it to your server, define the file permissions, and install it on your system. You may also watch the screencast about NitroSmart installation on our <a href="https://www.youtube.com/watch?v=L7NGodeB9sQ">YouTube channel</a>.</p>
+<p>Before you begin the installation, ensure that your web host meets the <a class="xref" href="../technology-and-system-requirements.html">minimum requirements to run NitroSmart</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>For more information on hosting selection guidelines, visit <a class="xref" href="choose-a-hosting-company.html">this page</a>.</p>
 </div>
-<p>There are several options available when downloading nopCommerce. In order to determine which option to download, you need to decide how you will use it. The following options are available:</p>
+<p>There are several options available when downloading NitroSmart. In order to determine which option to download, you need to decide how you will use it. The following options are available:</p>
 <ol>
-<li><strong>Web (no source)</strong>. This option is available for users who do not wish/need to develop any custom code. This is a precompiled version of nopCommerce that can simply be uploaded to your hosting provider and used immediately. With this option, users can still modify the look and feel or user interface (UI) of their site to suit their needs, but they do not have to worry about the development.</li>
-<li><strong>Source code</strong>. This option contains a full Visual Studio solution. It is for those users who wish to customize the code within nopCommerce. It contains all the source code used to develop nopCommerce and must be opened in Visual Studio. It also includes scripts to build and compile the solution to upload to your hosting provider.</li>
-<li><strong>Upgrade script</strong>. The upgrade script option is for users who have a nopCommerce installation already in place. The script will upgrade your current installation to the latest version.</li>
+<li><strong>Web (no source)</strong>. This option is available for users who do not wish/need to develop any custom code. This is a precompiled version of NitroSmart that can simply be uploaded to your hosting provider and used immediately. With this option, users can still modify the look and feel or user interface (UI) of their site to suit their needs, but they do not have to worry about the development.</li>
+<li><strong>Source code</strong>. This option contains a full Visual Studio solution. It is for those users who wish to customize the code within NitroSmart. It contains all the source code used to develop NitroSmart and must be opened in Visual Studio. It also includes scripts to build and compile the solution to upload to your hosting provider.</li>
+<li><strong>Upgrade script</strong>. The upgrade script option is for users who have a NitroSmart installation already in place. The script will upgrade your current installation to the latest version.</li>
 </ol>
-<p>With each of these options, excluding the upgrade script, you can deploy nopCommerce to your development environment and your hosting provider. Choose the option you would like to <a href="https://www.nopcommerce.com/en/download-nopcommerce">download</a> and click the appropriate download link to start your download. It is recommended to create a new folder on your desktop to store your downloaded files for easy access.</p>
+<p>With each of these options, excluding the upgrade script, you can deploy NitroSmart to your development environment and your hosting provider. Choose the option you would like to <a href="https://www.nopcommerce.com/en/download-nopcommerce">download</a> and click the appropriate download link to start your download. It is recommended to create a new folder on your desktop to store your downloaded files for easy access.</p>
 <h2 id="running-the-site-using-iis-package-without-the-source-code">Running the site using IIS (package without the source code)</h2>
-<p>To use IIS, copy the contents of the extracted nopCommerce folder to an IIS virtual directory (or site root), and then view the site using a browser.</p>
-<p>If you are using nopCommerce 3.90 or below, then configure it to run in integrated mode, and configure the application pool to run the .NET Framework version 4. Please note that it's not required for nopCommerce 4.00 and above.</p>
+<p>To use IIS, copy the contents of the extracted NitroSmart folder to an IIS virtual directory (or site root), and then view the site using a browser.</p>
+<p>If you are using NitroSmart 3.90 or below, then configure it to run in integrated mode, and configure the application pool to run the .NET Framework version 4. Please note that it's not required for NitroSmart 4.00 and above.</p>
 <h2 id="running-the-site-using-visual-studio-package-with-the-source-code">Running the site using Visual Studio (package with the source code)</h2>
 <p>This step describes how to launch a site in Visual Studio. To run the site in Visual Studio, extract the full source code archive to a local folder. Launch Visual Studio and select <strong>File → Open → Project/Solution</strong>. Navigate to the folder where you extracted the archive and open the <code>NopCommerce.sln</code> solution file. Run <code>Nop.Web</code> project.</p>
 <h2 id="getting-the-ready-to-deploy-package-without-the-source-code-from-a-package-with-the-source-code">Getting the &quot;ready to deploy&quot; package (without the source code) from a package with the source code</h2>
-<p>If you're using nopCommerce <strong>3.20 (or above)</strong>, then please follow these steps:</p>
+<p>If you're using NitroSmart <strong>3.20 (or above)</strong>, then please follow these steps:</p>
 <ul>
 <li>Open the solution in Visual Studio.</li>
 <li>Rebuild the entire solution.</li>
 <li>Publish the <strong>Nop.Web</strong> project from Visual Studio. When publishing, ensure that configuration is set to <em>Release</em>.</li>
 </ul>
 <h2 id="installation-process">Installation process</h2>
-<p>nopCommerce requires written permissions for the directories and files described below:</p>
+<p>NitroSmart requires written permissions for the directories and files described below:</p>
 <ul>
-<li><p><strong>For nopCommerce versions 4.00 and above:</strong></p>
+<li><p><strong>For NitroSmart versions 4.00 and above:</strong></p>
 <ul>
 <li><code>\App_Data\</code></li>
 <li><code>\bin\</code></li>
@@ -141,7 +141,7 @@
 <li><code>\App_Data\appsettings.json</code> (or dataSettings.json for earlier versions; after installation)</li>
 </ul>
 </li>
-<li><p><strong>For nopCommerce versions 2.00-3.90:</strong></p>
+<li><p><strong>For NitroSmart versions 2.00-3.90:</strong></p>
 <ul>
 <li><code>\App_Data\</code></li>
 <li><code>\bin\</code></li>
@@ -158,14 +158,14 @@
 </li>
 </ul>
 <p>These permissions are validated during the installation process. If you have no written permissions, a warning message will be displayed, requesting you to configure permissions.
-Before installing nopCommerce, ensure you have a database server installed on your system.</p>
+Before installing NitroSmart, ensure you have a database server installed on your system.</p>
 <p>You can use any of the following authentication methods to connect to the server:</p>
 <ul>
 <li><strong>SQL server account</strong>: When connecting using this method, logins are created in the SQL server that is not based on the Windows user accounts. Both the user name and the password are created using the SQL server and stored in the SQL server. When using this method you must enter your login and password.</li>
 <li><strong>Integrated Windows authentication</strong>: When connecting using this method, the SQL Server validates the account name and password using the Windows principal token in the operating system. This means the user identity is confirmed by Windows. The SQL Server requests no password and does not perform the identity validation. Windows authentication is the default authentication mode and is much more secure than SQL server authentication. Windows authentication uses Kerberos security protocol, provides password policy enforcement with regard to complexity validation for strong passwords, provides support for account lockout, and supports password expiration. A connection made using Windows authentication is sometimes called a trusted connection, because the SQL server trusts the credentials provided by Windows.</li>
 </ul>
 <p>Once you open the site for the first time, you will be redirected to the installation page as follows:
-<img src="static/installing-local/installation.jpg" alt="nopCommerce installation"></p>
+<img src="static/installing-local/installation.jpg" alt="NitroSmart installation"></p>
 <p>In the <em>Store information</em> panel, fill the following details:</p>
 <ul>
 <li><strong>Admin user email</strong>: this is the email address of the first admin of the site.</li>
@@ -186,7 +186,7 @@ Before installing nopCommerce, ensure you have a database server installed on yo
 <li><strong>Create database if it doesn't exist</strong>: it is recommended that you create your database and database user beforehand to ensure a successful installation. Simply create a database instance and add the database user to it. The installation process will create all the tables, stored procedures, and more.</li>
 <li><strong>Enter raw connection string (advanced)</strong>: select this checkbox if you want to enter a <strong>Connection string</strong> instead of filling the connection fields.</li>
 <li><strong>Server name</strong>: this is the IP, URL, or server name of your database. Get your server name from the database management system or from the hosting control panel.</li>
-<li><strong>Database name</strong>: this is the name of the database used by nopCommerce. If you opted to create your database ahead of time, use the name you gave your database here.</li>
+<li><strong>Database name</strong>: this is the name of the database used by NitroSmart. If you opted to create your database ahead of time, use the name you gave your database here.</li>
 <li><strong>Use integrated Windows authentication</strong>: if you are installing at a hosting provider, you can use your SQL Server account and supply the credentials you created with your database. In this case don't select this option. If you are using a development environment, you can select Windows authentication. In this case, select this checkbox. If you are using Windows authentication, the account hosting the application pool in IIS must be a user in the database.</li>
 <li><strong>SQL Username</strong>: enter your database user login.</li>
 <li><strong>SQL Password</strong>: enter your database user password.</li>
@@ -199,11 +199,11 @@ Before installing nopCommerce, ensure you have a database server installed on yo
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If you are using nopCommerce 3.90 or below, ensure that your application pool is set to the <em>Integrated</em> mode.</p>
+<p>If you are using NitroSmart 3.90 or below, ensure that your application pool is set to the <em>Integrated</em> mode.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If you want to completely reset a nopCommerce site to its default settings, you can delete the <strong>ConnectionStrings</strong> section from the <code>appsettings.json</code> (or <code>dataSettings.json</code> for earlier versions) file located in the <code>App_Data</code> directory. You can even delete this whole file but note that in this case, it will be recovered on the next run with default values, so you can lose your settings.</p>
+<p>If you want to completely reset a NitroSmart site to its default settings, you can delete the <strong>ConnectionStrings</strong> section from the <code>appsettings.json</code> (or <code>dataSettings.json</code> for earlier versions) file located in the <code>App_Data</code> directory. You can even delete this whole file but note that in this case, it will be recovered on the next run with default values, so you can lose your settings.</p>
 </div>
             </article>
           </div>

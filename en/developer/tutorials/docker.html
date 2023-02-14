@@ -100,7 +100,7 @@
 <p>First, we need to install Docker on our PC. We will use <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> for Windows, it's help as to build and share containerized applications and microservices. The Docker Desktop also available for Linux and Mac.</p>
 <p>After installing and running the application, you will have access to all the possibilities of containerization. Further, we will do all the work in PowerShell, since the command mode will be the same in any environment.</p>
 </li>
-<li><p><strong>We collect the Docker container</strong>. For the convenience of executing commands, go to the directory where Dockerfile is located (the root directory of the nopCommerce source files).</p>
+<li><p><strong>We collect the Docker container</strong>. For the convenience of executing commands, go to the directory where Dockerfile is located (the root directory of the NitroSmart source files).</p>
 <p>The command that we need:</p>
 <pre><code class="lang-csharp">[docker build -t nopcommerce .]
 </code></pre>
@@ -124,11 +124,11 @@
 <pre><code class="lang-bash">docker ps
 </code></pre>
 </div>
-<p>On the browser we should see the page with the installation of nopCommerce.</p>
+<p>On the browser we should see the page with the installation of NitroSmart.</p>
 <p><img src="static/docker/docker_3.png" alt="docker_3"></p>
 <p>This will be our verification that the container is being created, launched, and successfully operating.</p>
 </li>
-<li><p>But to <strong>fully test</strong> the operation of the application in this way will only work if you have a SQL server that our container can access. But, as a rule, our and user environments are limited, so we have prepared a layout file that will allow you to deploy the nopCommerce container in conjunction with the container containing the SQL server.</p>
+<li><p>But to <strong>fully test</strong> the operation of the application in this way will only work if you have a SQL server that our container can access. But, as a rule, our and user environments are limited, so we have prepared a layout file that will allow you to deploy the NitroSmart container in conjunction with the container containing the SQL server.</p>
 <p>To deploy container composition, use the command:</p>
 <pre><code class="lang-bash">docker-compose up -d
 </code></pre>
@@ -136,7 +136,7 @@
 <p>And by opening the page on the browser we will be able to test everything we want. To connect to the database server, we use the following data (as described in the docker-compose.yml file):</p>
 <pre><code class="lang-bash">Server name: nopcommerce_mssql_server
 User: sa
-Password: nopCommerce_db_password
+Password: NitroSmart_db_password
 </code></pre>
 </li>
 <li><p>After testing is complete, you can remove all containers so that they do not interfere next time. Two commands will help to execute it:</p>
@@ -148,7 +148,7 @@ Password: nopCommerce_db_password
 </li>
 </ol>
 <h2 id="docker-hub">Docker Hub</h2>
-<p>Starting from version nopCommerce 4.20, we publish the completed image on the GitHub service, you can check the available versions by <a href="https://hub.docker.com/r/nopcommerceteam/nopcommerce">this link</a>, or download the latest version with the following command:</p>
+<p>Starting from version NitroSmart 4.20, we publish the completed image on the GitHub service, you can check the available versions by <a href="https://hub.docker.com/r/nopcommerceteam/nopcommerce">this link</a>, or download the latest version with the following command:</p>
 <pre><code class="lang-bash">docker pull nopcommerceteam/nopcommerce:latest
 </code></pre>
 
@@ -156,7 +156,7 @@ Password: nopCommerce_db_password
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

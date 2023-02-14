@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/getting-started/advanced-configuration/multi-store">
 <h1 id="multi-store">Multi-store</h1>
 
-<p>nopCommerce enables you to run more than one store using one interface from a single nopCommerce installation.</p>
+<p>NitroSmart enables you to run more than one store using one interface from a single NitroSmart installation.</p>
 <p>This enables you to host more than one front-end store on different domains and manage all admin operations from your single administration panel. You can share the catalog data between stores, have a product in more than one store, and your customers can log in to all of your stores using the same credentials.</p>
 <h2 id="configuring-multi-store">Configuring multi-store</h2>
 <h3 id="1-hosting-control-panel-part">1. Hosting control panel part</h3>
@@ -104,16 +104,16 @@
 <li><code>www.store2.com</code></li>
 </ul>
 <ol>
-<li><p>Upload and install the site on <code>www.store1.com</code>. This is the only place where nopCommerce files and DLLs are stored.</p>
+<li><p>Upload and install the site on <code>www.store1.com</code>. This is the only place where NitroSmart files and DLLs are stored.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Read more about how to install nopCommerce in the following chapter: <a class="xref" href="../../installation-and-upgrading/installing-nopcommerce/index.html">Installing nopCommerce</a>.</p>
+<p>Read more about how to install NitroSmart in the following chapter: <a class="xref" href="../../installation-and-upgrading/installing-nopcommerce/index.html">Installing NitroSmart</a>.</p>
 </div>
 </li>
-<li><p>In the control panel of <code>www.store2.com</code> (meaning your hosting control panel, not the nopCommerce administration area), ensure that all requests to <code>www.store2.com</code> are forwarded (not redirected) to <code>www.store1.com</code>. Perform this using CNAME records. This step is crucial.</p>
+<li><p>In the control panel of <code>www.store2.com</code> (meaning your hosting control panel, not the NitroSmart administration area), ensure that all requests to <code>www.store2.com</code> are forwarded (not redirected) to <code>www.store1.com</code>. Perform this using CNAME records. This step is crucial.</p>
 </li>
 <li><p>In the control panel of <code>www.store1.com</code>, configure a domain alias for <code>www.store2.com</code>. This step can be complicated for some users (ask your system administrator to perform this step if you have issues).</p>
-<p>After completing the steps above, when accessing <code>www.store2.com</code> from your browser, the content of <code>www.store1.com</code> will be displayed. The next step is to configure the stores in the nopCommerce administration area, which will be described below. You can then start uploading content for both stores.</p>
+<p>After completing the steps above, when accessing <code>www.store2.com</code> from your browser, the content of <code>www.store1.com</code> will be displayed. The next step is to configure the stores in the NitroSmart administration area, which will be described below. You can then start uploading content for both stores.</p>
 </li>
 <li><p>Optional (sample): This step can be performed from the Plesk control panel below as follows:</p>
 <p>Whenever <code>www.store2.com</code> is redirected to <code>www.store1.com</code>, the web server for Plesk does not know how to display <code>www.store2.com</code> since it uses Name-Based Virtual Hosting. Therefore, you must create a domain alias for <code>www.store2.com</code> as described below:</p>
@@ -133,8 +133,8 @@
 </ul>
 </li>
 </ol>
-<h3 id="2-nopcommerce-administration-area-part">2. nopCommerce administration area part</h3>
-<p>Once the installation and technical setup are done, you can manage your stores from the nopCommerce administration area. Go to <strong>Configuration → Stores</strong>. The <em>Stores</em> window will be displayed:</p>
+<h3 id="2-nopcommerce-administration-area-part">2. NitroSmart administration area part</h3>
+<p>Once the installation and technical setup are done, you can manage your stores from the NitroSmart administration area. Go to <strong>Configuration → Stores</strong>. The <em>Stores</em> window will be displayed:</p>
 <p><img src="static/multi-store/mainstore.png" alt="Stores window"></p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -173,7 +173,7 @@
 </li>
 </ul>
 <p>Add another store by clicking the <strong>Add new</strong> button on the <strong>Configuration → Stores</strong> page and filling in the similar fields.</p>
-<p>The two stores have now been configured using a single nopCommerce installation:</p>
+<p>The two stores have now been configured using a single NitroSmart installation:</p>
 <ul>
 <li><a href="http://www.store1.com">www.store1.com</a></li>
 <li><a href="http://www.store2.com">www.store2.com</a></li>

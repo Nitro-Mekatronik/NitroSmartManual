@@ -94,13 +94,13 @@
             <article class="content wrap" id="_content" data-uid="en/developer/tutorials/source-code-organization">
 <h1 id="source-code-organization">Source code organization</h1>
 
-<p>This document is a developer's guide to the structure of a nopCommerce solution and is intended to help new developers learn the source code. First of all, nopCommerce is an open-source application, so you can download it for free from <a href="https://github.com/nopSolutions/nopCommerce">GitHub</a>. Projects and folders are listed in the order in which they are sorted in <em>Visual Studio</em>. We recommend that you open your nopCommerce solution in <em>Visual Studio</em> and view projects and files as you read this document.</p>
+<p>This document is a developer's guide to the structure of a NitroSmart solution and is intended to help new developers learn the source code. First of all, NitroSmart is an open-source application, so you can download it for free from <a href="https://github.com/nopSolutions/NitroSmart">GitHub</a>. Projects and folders are listed in the order in which they are sorted in <em>Visual Studio</em>. We recommend that you open your NitroSmart solution in <em>Visual Studio</em> and view projects and files as you read this document.</p>
 <p><img src="static/source-code-organization/structure_of_projects.jpg" alt="Source code organization"></p>
 <p>Most of the projects, directories, and files are named so that you can get a rough idea of their purpose. For example, I don't even have to look inside the project called <code>Nop.Plugin.Payments.PayPalStandard</code> to guess what it does.</p>
 <h2 id="librariesnopcore"><code>\Libraries\Nop.Core</code></h2>
-<p>The <code>Nop.Core</code> project contains a set of core classes for nopCommerce, such as caching, events, helpers, and business objects (for example, <code>Order</code> and <code>Customer</code> entities).</p>
+<p>The <code>Nop.Core</code> project contains a set of core classes for NitroSmart, such as caching, events, helpers, and business objects (for example, <code>Order</code> and <code>Customer</code> entities).</p>
 <h2 id="librariesnopdata"><code>\Libraries\Nop.Data</code></h2>
-<p>The <code>Nop.Data</code> project contains a set of classes and functions for reading from and writing to a database or other data store. The <code>Nop.Data</code> library helps separate data-access logic from your business objects. nopCommerce uses the <em>Linq2DB</em> Code-First approach. Code-First allows a developer to define entities in the source code (all core entities are defined in the <code>Nop.Core</code> project), and then use <em>Linq2DB</em> and <em>FluentMigrator</em> to generate the database from the C# classes. That's why it's called Code-First. You can then query your objects using LINQ, which translates to SQL behind the scenes and is executed against the database. nopCommerce uses <a href="https://fluentmigrator.github.io/articles/technical/fluent-api-create.html">Fluent API</a> to fully customize the persistence mapping.</p>
+<p>The <code>Nop.Data</code> project contains a set of classes and functions for reading from and writing to a database or other data store. The <code>Nop.Data</code> library helps separate data-access logic from your business objects. NitroSmart uses the <em>Linq2DB</em> Code-First approach. Code-First allows a developer to define entities in the source code (all core entities are defined in the <code>Nop.Core</code> project), and then use <em>Linq2DB</em> and <em>FluentMigrator</em> to generate the database from the C# classes. That's why it's called Code-First. You can then query your objects using LINQ, which translates to SQL behind the scenes and is executed against the database. NitroSmart uses <a href="https://fluentmigrator.github.io/articles/technical/fluent-api-create.html">Fluent API</a> to fully customize the persistence mapping.</p>
 <h2 id="librariesnopservices"><code>\Libraries\Nop.Services</code></h2>
 <p>This project contains a set of core services, business logic, validations, or calculations related to the data if needed. Some people call it <em>Business Access Layer</em> (BAL).</p>
 <h2 id="projects-into-plugins-solution-folder">Projects into <code>\Plugins\</code> solution folder</h2>
@@ -110,7 +110,7 @@
 <h2 id="presentationnopwebframework"><code>\Presentation\Nop.Web.Framework</code></h2>
 <p><code>Nop.Web.Framework</code> is a class library project containing some common presentation things for the <code>Nop.Web</code> project.</p>
 <h2 id="testnoptests"><code>\Test\Nop.Tests</code></h2>
-<p><code>Nop.Tests</code> is a class library project containing some common test classes and helpers for other test projects. It does not have any tests. Read more about UNIT testing in nopCommerce in the following article: <a class="xref" href="unit-tests.html">UNIT testing</a>.</p>
+<p><code>Nop.Tests</code> is a class library project containing some common test classes and helpers for other test projects. It does not have any tests. Read more about UNIT testing in NitroSmart in the following article: <a class="xref" href="unit-tests.html">UNIT testing</a>.</p>
 <h3 id="nopcoretests"><code>\Nop.Core.Tests</code></h3>
 <p>Nop.Core.Tests is the test project for the Nop.Core project.</p>
 <h3 id="nopservicestests"><code>\Nop.Services.Tests</code></h3>
@@ -119,14 +119,14 @@
 <p><code>Nop.Web.Tests</code> is the test project for the presentation layer projects.</p>
 <h2 id="tutorials">Tutorials</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=6gLbizzSA9o&amp;list=PLnL_aDfmRHwtJmzeA7SxrpH3-XDY2ue0a">The Architecture behind the nopCommerce eCommerce Platform</a></li>
+<li><a href="https://www.youtube.com/watch?v=6gLbizzSA9o&amp;list=PLnL_aDfmRHwtJmzeA7SxrpH3-XDY2ue0a">The Architecture behind the NitroSmart eCommerce Platform</a></li>
 </ul>
 
                   <div class="course-banner">
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

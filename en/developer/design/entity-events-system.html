@@ -95,12 +95,12 @@
 <h1 id="entity-events-system">Entity events system</h1>
 
 <h2 id="overview">OverView</h2>
-<p>nopCommerce implements event-driven architecture which allows developers to subscribe or consume events broadcast by event publishers or event sources when some action/event is performed and also enables us to perform certain business logic when some specific event is triggered. In nopCommerce, we can subscribe or listen to various events published by the nopCommerce system event, or even we can write a logic that emits/publish an event which then can be listened to or subscribed to. For example, let's suppose we want to sync customer details to some other external system, so in that case, we can fire an event when new customer registers to our store or a customer change their profile. We can listen to that event and perform business logic which then can extract that newly created customer and send it to the external service for sync. And the best part is that we can do all these without changing the nopCommerce source code.</p>
+<p>NitroSmart implements event-driven architecture which allows developers to subscribe or consume events broadcast by event publishers or event sources when some action/event is performed and also enables us to perform certain business logic when some specific event is triggered. In NitroSmart, we can subscribe or listen to various events published by the NitroSmart system event, or even we can write a logic that emits/publish an event which then can be listened to or subscribed to. For example, let's suppose we want to sync customer details to some other external system, so in that case, we can fire an event when new customer registers to our store or a customer change their profile. We can listen to that event and perform business logic which then can extract that newly created customer and send it to the external service for sync. And the best part is that we can do all these without changing the NitroSmart source code.</p>
 <p>Developers can either publish an event or consume an event:</p>
 <ul>
 <li><p>To publish an event a developer will need to obtain an instance of <strong>IEventPublisher</strong> and call the <strong>Publish</strong> method with the appropriate event data.</p>
 </li>
-<li><p>To listen for an event the developer will want to create a new implementation of the generic <strong>IConsumer</strong> interface. Once a new consumer implementation has been created nopCommerce uses reflection to find and register the implementation for event handling.</p>
+<li><p>To listen for an event the developer will want to create a new implementation of the generic <strong>IConsumer</strong> interface. Once a new consumer implementation has been created NitroSmart uses reflection to find and register the implementation for event handling.</p>
 </li>
 </ul>
 <p>There are three event publisher extension methods that are used for data modification events named <code>EntityInsertedAsync</code>, <code>EntityUpdatedAsync</code> and <code>EntityDeletedAsync</code> with <strong>BaseEntity</strong> inherit of <strong>IEventPublisher</strong> interface which is responsible to broadcast the insert, updating, and deleting entity events respectively.</p>
@@ -208,7 +208,7 @@
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

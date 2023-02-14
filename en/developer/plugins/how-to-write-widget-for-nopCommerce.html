@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to write a widget for nopCommerce </title>
+    <title>How to write a widget for NitroSmart </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to write a widget for nopCommerce ">
+    <meta name="title" content="How to write a widget for NitroSmart ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -91,20 +91,20 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="en/developer/plugins/how-to-write-widget-for-nopCommerce">
-<h1 id="how-to-write-a-widget-for-nopcommerce">How to write a widget for nopCommerce</h1>
+            <article class="content wrap" id="_content" data-uid="en/developer/plugins/how-to-write-widget-for-NitroSmart">
+<h1 id="how-to-write-a-widget-for-nopcommerce">How to write a widget for NitroSmart</h1>
 
-<p>To extend nopCommerce functionality, widgets are used. There are various types of widgets like <a href="https://github.com/nopSolutions/nopCommerce/tree/master/src/Plugins/Nop.Plugin.Widgets.NivoSlider">NivoSlider</a> and <a href="https://github.com/nopSolutions/nopCommerce/tree/master/src/Plugins/Nop.Plugin.Widgets.GoogleAnalytics">Google Analytics</a> which are already contained in the nopCommerce's repo. nopCommerce marketplace already contains various widgets (both free and paid) which may meet your requirement(s). If you have not found one, then you are at the right place because this article will guide you through the process of creating a widget according to your need.</p>
+<p>To extend NitroSmart functionality, widgets are used. There are various types of widgets like <a href="https://github.com/nopSolutions/NitroSmart/tree/master/src/Plugins/Nop.Plugin.Widgets.NivoSlider">NivoSlider</a> and <a href="https://github.com/nopSolutions/NitroSmart/tree/master/src/Plugins/Nop.Plugin.Widgets.GoogleAnalytics">Google Analytics</a> which are already contained in the NitroSmart's repo. NitroSmart marketplace already contains various widgets (both free and paid) which may meet your requirement(s). If you have not found one, then you are at the right place because this article will guide you through the process of creating a widget according to your need.</p>
 <h2 id="the-widget-structure-required-files-and-locations">The widget structure, required files, and locations</h2>
 <ol>
 <li><p>Start by creating a new <strong>Class Library</strong> project in the solution. It is recommended to place your widget in the <strong>Plugins</strong> directory, located in the root folder of the source, where other widgets and plugins already reside.</p>
-<p><img src="static/how-to-write-a-widget-for-nopCommerce/image1.png" alt="image1"></p>
+<p><img src="static/how-to-write-a-widget-for-NitroSmart/image1.png" alt="image1"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Do not get confused this directory with the one which exists in <em>Presentation\Nop.Web</em> directory. The <em>Plugins</em> directory in the <em>Nop.Web</em> directory contains the plugin's compiled files.</p>
 </div>
 <p>A recommended name for a widget project is <code>Nop.Plugin.Widgets.{Name}</code>. <code>{Name}</code> is your widget name (for example, &quot;<strong>GoogleAnalytics</strong>&quot;). For example, <em>Google Analytics widget</em> has the following name: <code>Nop.Plugin.Widgets.GoogleAnalytics</code>. But please note that it's not a requirement. And you can choose any name for a widget. For example, &quot;<em>MyFirstNopWidget</em>&quot;. The <em>Plugins</em> directory structure of a solution looks like the following.</p>
-<p><img src="static/how-to-write-a-widget-for-nopCommerce/image2.png" alt="image2"></p>
+<p><img src="static/how-to-write-a-widget-for-NitroSmart/image2.png" alt="image2"></p>
 </li>
 <li><p>Once the widget project is created, the <strong>.csproj</strong> file content should be updated using any available text editor application. Replace the content with the following one:</p>
 <pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
@@ -144,9 +144,9 @@
 </ol>
 <h2 id="handling-requests-controllers-models-and-views">Handling requests. Controllers, models, and views</h2>
 <p>Now you can see the widget by going to <strong>Admin area</strong> → <strong>Configuration</strong> → <strong>Local Plugins</strong>.</p>
-<p><img src="static/how-to-write-a-widget-for-nopCommerce/image4.png" alt="image4"></p>
+<p><img src="static/how-to-write-a-widget-for-NitroSmart/image4.png" alt="image4"></p>
 <p>When a plugin/widget is installed, you will see the <strong>Uninstall</strong> button. <em>For performance improvement, it is a good practice that you uninstall plugins/widgets which are not necessary</em>.</p>
-<p><img src="static/how-to-write-a-widget-for-nopCommerce/image5.png" alt="image5">
+<p><img src="static/how-to-write-a-widget-for-NitroSmart/image5.png" alt="image5">
 There will be the <strong>Install</strong> and <strong>Delete</strong> buttons when a plugin/widget is not installed or uninstalled. <em>Deleting will remove physical files from the server</em>.</p>
 <p>But as you guessed our widget does nothing. It does not even have a user interface for its configuration. Let's create a page to configure the widget.</p>
 <p>What we need to do now is create a controller, a model, a view, and a view component.</p>
@@ -167,7 +167,7 @@ There will be the <strong>Install</strong> and <strong>Delete</strong> buttons w
 </code></pre>
 </li>
 <li><p>Also make sure that you have <strong>_ViewImports.cshtml</strong> file into your <code>Views</code> directory. You can just copy it from any other existing plugin or widget.</p>
-<p><img src="static/how-to-write-a-widget-for-nopCommerce/image7.png" alt="image7"></p>
+<p><img src="static/how-to-write-a-widget-for-NitroSmart/image7.png" alt="image7"></p>
 </li>
 <li><p>Create the controller. Add a <code>Controllers</code> folder in the new widget, and then add a new controller class. A good practice is to name plugin controllers <code>Widgets{Name}Controller.cs</code>. For example, <strong>WidgetsGoogleAnalyticsController</strong>. Of course, it's not a requirement to name controllers this way, but just a recommendation. Then create an appropriate action method for the configuration page (in the admin area). Let's name it <code>Configure</code>. Prepare a model class and pass it to the following view using a physical view path: <code>~/Plugins/{PluginOutputDirectory}/Views/Configure.cshtml</code>.</p>
 <pre><code class="lang-cs">public async Task&lt;IActionResult&gt; Configure()
@@ -213,7 +213,7 @@ Each widget should specify a list of widget zones. A base class named <strong>IW
     return Task.FromResult&lt;IList&lt;string&gt;&gt;(new List&lt;string&gt; {PublicWidgetZones.HeadHtmlTag });
 }
 </code></pre>
-<p>You can find a list of public widget zones from this <a href="https://github.com/nopSolutions/nopCommerce/blob/master/src/Presentation/Nop.Web.Framework/Infrastructure/PublicWidgetZones.cs">link</a> and admin widget zones following this <a href="https://github.com/nopSolutions/nopCommerce/blob/master/src/Presentation/Nop.Web.Framework/Infrastructure/AdminWidgetZones.cs">link</a>.
+<p>You can find a list of public widget zones from this <a href="https://github.com/nopSolutions/NitroSmart/blob/master/src/Presentation/Nop.Web.Framework/Infrastructure/PublicWidgetZones.cs">link</a> and admin widget zones following this <a href="https://github.com/nopSolutions/NitroSmart/blob/master/src/Presentation/Nop.Web.Framework/Infrastructure/AdminWidgetZones.cs">link</a>.
 In addition to <code>GetWidgetZonesAsync</code>, <strong>IWidgetPlugin</strong> has <code>GetWidgetViewComponentName</code> method which returns ViewComponent name. It accepts &quot;<em>widgetZone</em>&quot; name as parameter and can be used to render different view based on the selected widget zone.</p>
 <pre><code class="lang-cs">public string GetWidgetViewComponentName(string widgetZone)
 {
@@ -223,7 +223,7 @@ In addition to <code>GetWidgetZonesAsync</code>, <strong>IWidgetPlugin</strong> 
 </li>
 </ol>
 <h2 id="project-structure-of-google-analytics-widget">Project structure of Google Analytics widget</h2>
-<p><img src="static/how-to-write-a-widget-for-nopCommerce/image11.png" alt="image11"></p>
+<p><img src="static/how-to-write-a-widget-for-NitroSmart/image11.png" alt="image11"></p>
 <h2 id="handling-installasync-and-uninstallasync-methods">Handling &quot;InstallAsync&quot; and &quot;UninstallAsync&quot; methods</h2>
 <p>This step is optional. Some widgets can require additional logic during their installation. For example, a widget can insert new locale resources or settings values. So open your <strong>IWidgetPlugin</strong> implementation (in most cases it'll be derived from <strong>BasePlugin</strong> class) and override the following methods:</p>
 <ol>
@@ -255,7 +255,7 @@ In addition to <code>GetWidgetZonesAsync</code>, <strong>IWidgetPlugin</strong> 
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>
@@ -268,7 +268,7 @@ In addition to <code>GetWidgetZonesAsync</code>, <strong>IWidgetPlugin</strong> 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nopSolutions/NitroSmartDocs/blob/master/en/developer/plugins/how-to-write-widget-for-nopCommerce.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nopSolutions/NitroSmartDocs/blob/master/en/developer/plugins/how-to-write-widget-for-NitroSmart.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

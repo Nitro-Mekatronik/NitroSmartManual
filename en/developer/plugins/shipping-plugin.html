@@ -94,13 +94,13 @@
             <article class="content wrap" id="_content" data-uid="en/developer/plugins/shipping-plugin">
 <h1 id="how-to-code-my-shipping-rate-computation-method">How to code my shipping rate computation method</h1>
 
-<p>If customers have some shippable products, they can choose a shipping option during checkout. These shipping options are returned from shipping rate computation methods (such as <em>UPS</em>, <em>USPS</em>, <em>FedEx</em>, etc). Shipping rate computation methods are implemented as plugins in nopCommerce. We recommend you read <a class="xref" href="how-to-write-plugin-4.60.html">How to write a plugin for nopCommerce 4.60</a> before you start coding a new shipping rate computation method. The article will explain to you the required steps for creating a plugin. So actually a shipping rate computation method is an ordinary plugin that implements an <strong>IShippingRateComputationMethod</strong> interface (<code>Nop.Services.Shipping</code> namespace). So add a new shipping plugin project (<em>class library</em>) to the solution and let's get started.</p>
+<p>If customers have some shippable products, they can choose a shipping option during checkout. These shipping options are returned from shipping rate computation methods (such as <em>UPS</em>, <em>USPS</em>, <em>FedEx</em>, etc). Shipping rate computation methods are implemented as plugins in NitroSmart. We recommend you read <a class="xref" href="how-to-write-plugin-4.60.html">How to write a plugin for NitroSmart 4.60</a> before you start coding a new shipping rate computation method. The article will explain to you the required steps for creating a plugin. So actually a shipping rate computation method is an ordinary plugin that implements an <strong>IShippingRateComputationMethod</strong> interface (<code>Nop.Services.Shipping</code> namespace). So add a new shipping plugin project (<em>class library</em>) to the solution and let's get started.</p>
 <h2 id="controllers-views-models">Controllers, views, models</h2>
 <p>Add a controller and an appropriate <strong>Configure</strong> action method and a view. These will define how a store owner sees configuration options in the admin panel <em>System → Configuration → Shipping → Shipping providers</em>. This article does not explain how to configure plugins, but you can find more info about it <a class="xref" href="../../getting-started/configure-shipping/shipping-providers/index.html">here</a>.</p>
 <p><img src="static/shipping-plugin/shipping-plugin_1.png" alt="shipping-plugin_1"></p>
 <p>Once this step is complete, you can start adding the required business logic for getting shipping options.</p>
 <h2 id="getting-shipping-options">Getting shipping options</h2>
-<p>Now you need to create a class that implements the <strong>IShippingRateComputationMethod</strong> interface. This is the class that will be doing all the actual work. When nopCommerce calculates shipping totals or needs to get a list of available shipping options, the <strong>GetShippingOptionsAsync</strong> or <strong>GetFixedRateAsync</strong> methods of your class will be called. Here is how UPSComputationMethod class is defined (&quot;UPS&quot; method):</p>
+<p>Now you need to create a class that implements the <strong>IShippingRateComputationMethod</strong> interface. This is the class that will be doing all the actual work. When NitroSmart calculates shipping totals or needs to get a list of available shipping options, the <strong>GetShippingOptionsAsync</strong> or <strong>GetFixedRateAsync</strong> methods of your class will be called. Here is how UPSComputationMethod class is defined (&quot;UPS&quot; method):</p>
 <pre><code class="lang-csharp">public class UPSComputationMethod : BasePlugin, IShippingRateComputationMethod
 </code></pre>
 <p><strong>IShippingRateComputationMethod</strong> interface has several methods and properties which are required to implement.</p>
@@ -116,7 +116,7 @@
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

@@ -215,13 +215,13 @@ public enum ShoppingCartType
 <p>As you understand, the standard installation includes much more tables. We don't describe them all, since many of them have no connections and serve only for a specific purpose, while others are used very rarely.</p>
 <h2 id="database-naming-convention">Database naming convention</h2>
 <p>You may have noticed that the database uses a mixed approach to naming of tables and columns (with <code>_</code> char, without <code>_</code>, CamelCase). Long time ago we used <code>_</code> char. But now we've completely switched to using <strong>CamelCase</strong> notation. But we decide not to change names of the existing tables or columns because many of our users already could write a huge amount of their custom scripts that would inevitably stop working.</p>
-<p>For backward compatibility with the new standards, we added the <code>INameCompatibility</code> interface which allows you to redefine the names of tables and columns for the correct mapping of objects with tables created according to the old naming standards. You can see the complete list of overrides in the <a href="https://github.com/nopSolutions/nopCommerce/blob/develop/src/Libraries/Nop.Data/Mapping/BaseNameCompatibility.cs">BaseNameCompatibility</a> class from the <code>Nop.Data.Mapping</code> namespace.</p>
+<p>For backward compatibility with the new standards, we added the <code>INameCompatibility</code> interface which allows you to redefine the names of tables and columns for the correct mapping of objects with tables created according to the old naming standards. You can see the complete list of overrides in the <a href="https://github.com/nopSolutions/NitroSmart/blob/develop/src/Libraries/Nop.Data/Mapping/BaseNameCompatibility.cs">BaseNameCompatibility</a> class from the <code>Nop.Data.Mapping</code> namespace.</p>
 
                   <div class="course-banner">
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

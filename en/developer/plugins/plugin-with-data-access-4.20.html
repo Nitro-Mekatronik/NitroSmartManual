@@ -94,16 +94,16 @@
             <article class="content wrap" id="_content" data-uid="en/developer/plugins/plugin-with-data-access-4.20">
 <h1 id="plugin-with-data-access-420-and-below">Plugin with data access&quot; (4.20 and below)</h1>
 
-<p>In this tutorial I'll be using the nopCommerce plugin architecture to implement a product view tracker. Before we begin with the development it is very important that you have read, understood, and successfully completed the tutorials listed below. I'll be skipping over some explanations covered in the previous articles, but you can recap using the links provided.</p>
+<p>In this tutorial I'll be using the NitroSmart plugin architecture to implement a product view tracker. Before we begin with the development it is very important that you have read, understood, and successfully completed the tutorials listed below. I'll be skipping over some explanations covered in the previous articles, but you can recap using the links provided.</p>
 <ul>
 <li><a class="xref" href="../tutorials/index.html">Developer tutorials</a></li>
 <li><a class="xref" href="../tutorials/update-existing-entity.html">Updating an existing entity. How to add a new property.</a></li>
-<li><a class="xref" href="how-to-write-plugin-4.20.html">How to write a plugin for nopCommerce 4.20</a></li>
+<li><a class="xref" href="how-to-write-plugin-4.20.html">How to write a plugin for NitroSmart 4.20</a></li>
 </ul>
 <p>We will start coding with the data access layer, move on to the service layer, and finally end on dependency injection.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The practical application of this plugin is questionable, but I couldn't think of a feature that didn't come with nopCommerce and would fit in a reasonable size post. If you use this plugin in a production environment I offer no warranties. I am always interested in success stories and I would be happy to hear that the post provided more than just an educational value.</p>
+<p>The practical application of this plugin is questionable, but I couldn't think of a feature that didn't come with NitroSmart and would fit in a reasonable size post. If you use this plugin in a production environment I offer no warranties. I am always interested in success stories and I would be happy to hear that the post provided more than just an educational value.</p>
 </div>
 <h2 id="getting-started">Getting started</h2>
 <p>Create a new class library project &quot;Nop.Plugin.Other.ProductViewTracker&quot;.</p>
@@ -112,7 +112,7 @@
 <p><img src="static/plugin-with-data-access/plugin-with-data-access_2.jpg" alt="plugin-with-data-access_2"></p>
 <p>For information about the <code>plugin.json</code> file, please see <a class="xref" href="plugin.json.html">plugin.json file</a>.</p>
 <p>Then add references to the following projects: Nop.Core, Nop.Data, Nop.Web.Framework</p>
-<h2 id="the-data-access-layer-aka-creating-new-entities-in-nopcommerce">The Data Access Layer (A.K.A. Creating new entities in nopCommerce)</h2>
+<h2 id="the-data-access-layer-aka-creating-new-entities-in-nopcommerce">The Data Access Layer (A.K.A. Creating new entities in NitroSmart)</h2>
 <p>Inside of the &quot;domain&quot; namespace we're going to create a public class named ProductViewTrackerRecord. This class extends BaseEntity, but it is otherwise a very boring file. Something to remember is that all properties are marked as virtual and it isn't just for fun. Virtual properties are required on database entities because of how Entity Framework instantiates and tracks classes. One other thing to note is that we do not have navigation properties (relational properties), and I'll cover those in more detail later.</p>
 <pre><code class="lang-csharp">namespace Nop.Plugin.Other.ProductViewTracker.Domain
 {
@@ -292,7 +292,7 @@ namespace Nop.Plugin.Misc.RepCred.Infrastructure
 }
 </code></pre>
 <h2 id="service-layer">Service layer</h2>
-<p>The service layer connects the data access layer and the presentation layer. Since it is bad form to share any type of responsibility in code each layer needs to be isolated. The service layer wraps the data layer with business logic and the presentation layer depends on the service layer. Because our task is very small our service layer does nothing but communicate with the repository (the repository in nopCommerce acts as a facade to the object context).</p>
+<p>The service layer connects the data access layer and the presentation layer. Since it is bad form to share any type of responsibility in code each layer needs to be isolated. The service layer wraps the data layer with business logic and the presentation layer depends on the service layer. Because our task is very small our service layer does nothing but communicate with the repository (the repository in NitroSmart acts as a facade to the object context).</p>
 <pre><code class="lang-csharp">namespace Nop.Plugin.Other.ProductViewTracker.Services
 {
     public interface IProductViewTrackerService
@@ -428,7 +428,7 @@ namespace Nop.Plugin.Other.ProductViewTracker.Services
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

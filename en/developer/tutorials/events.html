@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/developer/tutorials/events">
 <h1 id="exposing-and-handling-events">Exposing and Handling Events</h1>
 
-<p>Events are notifications broadcast to interested parties. Events are triggered on data changes like inserts, updates, and deletes. nopCommerce allows developers to &quot;listen&quot; for events they might be interested in. There are two ways a developer will work with events. A developer will either want to publish events for listeners to consume, or subscribe to events other developers will have programmatically published.</p>
+<p>Events are notifications broadcast to interested parties. Events are triggered on data changes like inserts, updates, and deletes. NitroSmart allows developers to &quot;listen&quot; for events they might be interested in. There are two ways a developer will work with events. A developer will either want to publish events for listeners to consume, or subscribe to events other developers will have programmatically published.</p>
 <ol>
 <li><p>To publish an event a developer will need to obtain an instance of <strong>IEventPublisher</strong> and call the <strong>PublishAsync</strong> method with the appropriate event data.</p>
 <pre><code class="lang-csharp">await _eventPublisher.PublishAsync(new OrderPlacedEvent(order));
@@ -110,7 +110,7 @@
 }
 </code></pre>
 </li>
-<li><p>To listen for an event the developer will want to create a new implementation of the generic <strong>IConsumer</strong> interface. Once a new consumer implementation has been created nopCommerce uses reflection to find and register the implementation for event handling.</p>
+<li><p>To listen for an event the developer will want to create a new implementation of the generic <strong>IConsumer</strong> interface. Once a new consumer implementation has been created NitroSmart uses reflection to find and register the implementation for event handling.</p>
 <pre><code class="lang-csharp">public class EventConsumer : IConsumer&lt;OrderPlacedEvent&gt;
 {
     public async Task HandleEventAsync(OrderPlacedEvent eventMessage)
@@ -129,7 +129,7 @@
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

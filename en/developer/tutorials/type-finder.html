@@ -115,12 +115,12 @@ public interface ITypeFinder
   IList&lt;Assembly&gt; GetAssemblies();
 }
 </code></pre>
-<p>The main task of a class that implements this interface is to search in assemblies for the types of the specified class or interface. We'll look at where this can come in handy using the examples from the source code of nopCommerce. But first, let's take a look at the <code>GetAssemblies</code> method. The task of this method is simply to return a list of the assemblies in which the search is performed. How exactly this list is formed depends on the specific implementation of the interface.</p>
+<p>The main task of a class that implements this interface is to search in assemblies for the types of the specified class or interface. We'll look at where this can come in handy using the examples from the source code of NitroSmart. But first, let's take a look at the <code>GetAssemblies</code> method. The task of this method is simply to return a list of the assemblies in which the search is performed. How exactly this list is formed depends on the specific implementation of the interface.</p>
 <h2 id="default-implementation-of-itypefinder">Default implementation of ITypeFinder</h2>
 <p>The main default implementation of this interface is the <code>WebAppTypeFinder</code> class. In turn <code>WebAppTypeFinder</code> only slightly extends the <code>AppDomainTypeFinder</code> class, which essentially does all the work of searching for types. But we use the derived class since it extends the scope of the search for types to all assemblies from the <strong>\Bin</strong> directory, while the main class works with assemblies from the current application domain only.</p>
-<p>Without dwelling on the implementation details of the <code>FindClassesOfType</code> methods (since they both boils down to the very simple function which code is available at <a href="https://github.com/nopSolutions/nopCommerce/blob/develop/src/Libraries/Nop.Core/Infrastructure/AppDomainTypeFinder.cs#L184">this link</a>) let's move on to the most important thing.</p>
+<p>Without dwelling on the implementation details of the <code>FindClassesOfType</code> methods (since they both boils down to the very simple function which code is available at <a href="https://github.com/nopSolutions/NitroSmart/blob/develop/src/Libraries/Nop.Core/Infrastructure/AppDomainTypeFinder.cs#L184">this link</a>) let's move on to the most important thing.</p>
 <h2 id="so-why-do-we-need-the-itypefinder-interface">So why do we need the ITypeFinder interface</h2>
-<p>This interface is used in some very important aspects of how nopCommerce works:</p>
+<p>This interface is used in some very important aspects of how NitroSmart works:</p>
 <ol>
 <li>Searching assemblies for configuring the migration mechanism (<a class="xref" href="migrations.html">How do migrations work?</a>)</li>
 <li>Searching classes of certain interfaces necessary for the correct launch of the site, such as:
@@ -128,7 +128,7 @@ public interface ITypeFinder
 <li><code>IStartupTask</code> - Initial initialization of the modules and plugins</li>
 <li><code>INopStartup</code> - Configuring services and middleware on application startup</li>
 <li><code>IOrderedMapperProfile</code> - Create <strong>AutoMapper</strong> configuration</li>
-<li><code>IEntityBuilder</code>, <code>INameCompatibility</code> - Configure database entity builder for backward compatibility of table naming for <strong>Linq2Db</strong>(<a class="xref" href="source-code-organization.html#librariesnopdata">nopCommerce Data Access Layer</a>)</li>
+<li><code>IEntityBuilder</code>, <code>INameCompatibility</code> - Configure database entity builder for backward compatibility of table naming for <strong>Linq2Db</strong>(<a class="xref" href="source-code-organization.html#librariesnopdata">NitroSmart Data Access Layer</a>)</li>
 <li><code>IRouteProvider</code> - Register routes</li>
 <li><code>IConsumer&lt;T&gt;</code> - Register handlers for internal events such as changes of database entities</li>
 <li><code>IExternalAuthenticationRegistrar</code> - Register and configure external authentication methods</li>
@@ -137,13 +137,13 @@ public interface ITypeFinder
 <li>Searching for a suitable shipment tracker in real-time</li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
-<p>As you can see, the interface is small but very valuable. It would be difficult to implement such a flexible modular structure as it's done in nopCommerce without using the approach implemented through the <code>ITypeFinder</code> interface methods.</p>
+<p>As you can see, the interface is small but very valuable. It would be difficult to implement such a flexible modular structure as it's done in NitroSmart without using the approach implemented through the <code>ITypeFinder</code> interface methods.</p>
 
                   <div class="course-banner">
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

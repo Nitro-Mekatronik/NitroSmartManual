@@ -20,7 +20,7 @@ references:
   name: Contributing a Theme
   href: en/developer/design/contributing-theme.html
 - uid: en/developer/design/customizing-theme
-  name: Customizing nopCommerce Themes
+  name: Customizing NitroSmart Themes
   href: en/developer/design/customizing-theme.html
 - uid: en/developer/design/entity-events-system
   name: Entity events system
@@ -29,7 +29,7 @@ references:
   name: Designer's Guide
   href: en/developer/design/index.html
 - uid: en/developer/design/installing-theme
-  name: Installing / Applying theme in nopCommerce
+  name: Installing / Applying theme in NitroSmart
   href: en/developer/design/installing-theme.html
 - uid: en/developer/design/new-theme
   name: Creating / Writing your own theme (using current / default theme)
@@ -59,37 +59,37 @@ references:
   name: Web API documentation
   href: en/developer/mobile-app/index.html
 - uid: en/developer/plugins/how-to-write-plugin-3.90
-  name: How to write a plugin for nopCommerce
+  name: How to write a plugin for NitroSmart
   href: en/developer/plugins/how-to-write-plugin-3.90.html
 - uid: en/developer/plugins/how-to-write-plugin-4.00
-  name: How to write a plugin for nopCommerce
+  name: How to write a plugin for NitroSmart
   href: en/developer/plugins/how-to-write-plugin-4.00.html
 - uid: en/developer/plugins/how-to-write-plugin-4.10
-  name: How to write a plugin for nopCommerce
+  name: How to write a plugin for NitroSmart
   href: en/developer/plugins/how-to-write-plugin-4.10.html
 - uid: en/developer/plugins/how-to-write-plugin-4.20
-  name: How to write a plugin for nopCommerce
+  name: How to write a plugin for NitroSmart
   href: en/developer/plugins/how-to-write-plugin-4.20.html
 - uid: en/developer/plugins/how-to-write-plugin-4.30
-  name: How to write a plugin for nopCommerce
+  name: How to write a plugin for NitroSmart
   href: en/developer/plugins/how-to-write-plugin-4.30.html
 - uid: en/developer/plugins/how-to-write-plugin-4.40
-  name: How to write a plugin for nopCommerce
+  name: How to write a plugin for NitroSmart
   href: en/developer/plugins/how-to-write-plugin-4.40.html
 - uid: en/developer/plugins/how-to-write-plugin-4.50
-  name: How to write a plugin for nopCommerce
+  name: How to write a plugin for NitroSmart
   href: en/developer/plugins/how-to-write-plugin-4.50.html
 - uid: en/developer/plugins/how-to-write-plugin-4.60
-  name: How to write a plugin for nopCommerce
+  name: How to write a plugin for NitroSmart
   href: en/developer/plugins/how-to-write-plugin-4.60.html
 - uid: en/developer/plugins/how-to-write-tax-plugin-4.20
-  name: How to write a Tax Plugin for nopCommerce 4.20
+  name: How to write a Tax Plugin for NitroSmart 4.20
   href: en/developer/plugins/how-to-write-tax-plugin-4.20.html
-- uid: en/developer/plugins/how-to-write-widget-for-nopCommerce
-  name: How to write a widget for nopCommerce
-  href: en/developer/plugins/how-to-write-widget-for-nopCommerce.html
+- uid: en/developer/plugins/how-to-write-widget-for-NitroSmart
+  name: How to write a widget for NitroSmart
+  href: en/developer/plugins/how-to-write-widget-for-NitroSmart.html
 - uid: en/developer/plugins/index
-  name: Creating a nopCommerce plugin
+  name: Creating a NitroSmart plugin
   href: en/developer/plugins/index.html
 - uid: en/developer/plugins/menu-item
   name: How to add a menu item into the administration area from a plugin
@@ -107,7 +107,7 @@ references:
   name: Plugin with data access
   href: en/developer/plugins/plugin-with-data-access-4.20.html
 - uid: en/developer/plugins/resource-files
-  name: Adding CSS and JS resource files into nopCommerce Plugin
+  name: Adding CSS and JS resource files into NitroSmart Plugin
   href: en/developer/plugins/resource-files.html
 - uid: en/developer/plugins/shipping-plugin
   name: How to code my own shipping rate computation method
@@ -115,14 +115,14 @@ references:
 - uid: en/developer/tutorials/appsettings-json-file
   name: The settings from the appsettings.json file
   href: en/developer/tutorials/appsettings-json-file.html
-- uid: en/developer/tutorials/architecture-of-nopCommerce
-  name: Architecture of nopCommerce
-  href: en/developer/tutorials/architecture-of-nopCommerce.html
+- uid: en/developer/tutorials/architecture-of-NitroSmart
+  name: Architecture of NitroSmart
+  href: en/developer/tutorials/architecture-of-NitroSmart.html
 - uid: en/developer/tutorials/azure-deploy
   name: Step by step to deploy on Azure with GIT and automatic builds
   href: en/developer/tutorials/azure-deploy.html
 - uid: en/developer/tutorials/azure-publish
-  name: How to deploy nopCommerce to Azure
+  name: How to deploy NitroSmart to Azure
   href: en/developer/tutorials/azure-publish.html
 - uid: en/developer/tutorials/code-style
   name: Configuring code style
@@ -158,13 +158,13 @@ references:
   name: Guide to creating a page containing a reporting table of DataTables
   href: en/developer/tutorials/guide-to-creating-a-page-containing-a-reporting-table-of-datatables.html
 - uid: en/developer/tutorials/guide-to-expanding-the-functionality-of-the-basic-functions-of-nop-commerce-through-a-plugin
-  name: A guide to expand the basic functionality of nopCommerce through a plugin
+  name: A guide to expand the basic functionality of NitroSmart through a plugin
   href: en/developer/tutorials/guide-to-expanding-the-functionality-of-the-basic-functions-of-nop-commerce-through-a-plugin.html
 - uid: en/developer/tutorials/index
   name: Developer tutorials
   href: en/developer/tutorials/index.html
 - uid: en/developer/tutorials/instruction-on-how-to-start-developing-on-nopcommerce
-  name: Instruction on how to start developing on nopCommerce
+  name: Instruction on how to start developing on NitroSmart
   href: en/developer/tutorials/instruction-on-how-to-start-developing-on-nopcommerce.html
 - uid: en/developer/tutorials/inversion-of-control
   name: Inversion of Control and Dependency Injection
@@ -236,7 +236,7 @@ references:
   name: PDF settings
   href: en/getting-started/advanced-configuration/pdf-settings.html
 - uid: en/getting-started/advanced-configuration/plugins-in-nopcommerce
-  name: Plugins in nopCommerce
+  name: Plugins in NitroSmart
   href: en/getting-started/advanced-configuration/plugins-in-nopcommerce.html
 - uid: en/getting-started/advanced-configuration/robots-txt
   name: robots.txt
@@ -359,7 +359,7 @@ references:
   name: Getting started
   href: en/getting-started/index.html
 - uid: en/index
-  name: nopCommerce Documentation
+  name: NitroSmart Documentation
   href: en/index.html
 - uid: en/installation-and-upgrading/index
   name: Installation & upgrading
@@ -368,10 +368,10 @@ references:
   name: Choose a hosting company
   href: en/installation-and-upgrading/installing-nopcommerce/choose-a-hosting-company.html
 - uid: en/installation-and-upgrading/installing-nopcommerce/everleap-fully-managed-hosting
-  name: Fully-managed Private Cloud hosting for nopCommerce
+  name: Fully-managed Private Cloud hosting for NitroSmart
   href: en/installation-and-upgrading/installing-nopcommerce/everleap-fully-managed-hosting.html
 - uid: en/installation-and-upgrading/installing-nopcommerce/index
-  name: Installing nopCommerce
+  name: Installing NitroSmart
   href: en/installation-and-upgrading/installing-nopcommerce/index.html
 - uid: en/installation-and-upgrading/installing-nopcommerce/installing-local
   name: Installing local
@@ -386,16 +386,16 @@ references:
   name: Installing on Windows
   href: en/installation-and-upgrading/installing-nopcommerce/installing-on-windows.html
 - uid: en/installation-and-upgrading/installing-nopcommerce/pre-installed-nopcommerce
-  name: Pre-installed nopCommerce
+  name: Pre-installed NitroSmart
   href: en/installation-and-upgrading/installing-nopcommerce/pre-installed-nopcommerce.html
 - uid: en/installation-and-upgrading/installing-nopcommerce/web-farms
-  name: Load balancing and web farms in nopCommerce
+  name: Load balancing and web farms in NitroSmart
   href: en/installation-and-upgrading/installing-nopcommerce/web-farms.html
 - uid: en/installation-and-upgrading/technology-and-system-requirements
   name: Technology & system requirements
   href: en/installation-and-upgrading/technology-and-system-requirements.html
 - uid: en/installation-and-upgrading/upgrading-nopcommerce
-  name: Upgrading nopCommerce
+  name: Upgrading NitroSmart
   href: en/installation-and-upgrading/upgrading-nopcommerce.html
 - uid: en/running-your-store/catalog/catalog-settings
   name: Catalog settings

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Load balancing and web farms in nopCommerce </title>
+    <title>Load balancing and web farms in NitroSmart </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Load balancing and web farms in nopCommerce ">
+    <meta name="title" content="Load balancing and web farms in NitroSmart ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -92,22 +92,22 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="en/installation-and-upgrading/installing-nopcommerce/web-farms">
-<h1 id="load-balancing-and-web-farms-in-nopcommerce">Load balancing and web farms in nopCommerce</h1>
+<h1 id="load-balancing-and-web-farms-in-nopcommerce">Load balancing and web farms in NitroSmart</h1>
 
 <p>Load balancing is the distribution of a workload across many nodes. It is typically used for balancing HTTP traffic over multiple servers acting together as a web front end.</p>
-<p>There are several ways to configure load balancing in nopCommerce:</p>
+<p>There are several ways to configure load balancing in NitroSmart:</p>
 <ol>
 <li>Use cloud-based autoscaling appliances like Microsoft's Azure Web Apps. Please find more about it <a class="xref" href="installing-on-microsoft-azure.html">here</a>.</li>
 <li>Configure load balancing with IIS web farms. This approach is described below.</li>
 </ol>
-<p>We highly recommend you to read <a href="https://docs.microsoft.com/en-us/iis/web-hosting/scenario-build-a-web-farm-with-iis-servers/overview-build-a-web-farm-with-iis-servers">this tutorial</a> by Microsoft before you start configuring a web farm for nopCommerce. So Microsoft suggests two ways to build a web farm with IIS servers:</p>
+<p>We highly recommend you to read <a href="https://docs.microsoft.com/en-us/iis/web-hosting/scenario-build-a-web-farm-with-iis-servers/overview-build-a-web-farm-with-iis-servers">this tutorial</a> by Microsoft before you start configuring a web farm for NitroSmart. So Microsoft suggests two ways to build a web farm with IIS servers:</p>
 <ol>
 <li>Local Content Infrastructure</li>
 <li>Shared Network Content Infrastructure</li>
 </ol>
-<p>nopCommerce supports both ways and handles content replication by using Distributed File System Replication (DFSR) if you use <strong>Local Content Infrastructure</strong> or uses a central location to manage the content with <strong>Shared Network Content Infrastructure</strong>.</p>
-<h2 id="nopcommerce-configuration">nopCommerce configuration</h2>
-<p>First of all, you have to configure the initial settings of your web farm in IIS and add the first instance of your nopCommerce store there. Then, you have to configure a few settings in the nopCommerce admin area to allow nopCommerce to work with web farms:</p>
+<p>NitroSmart supports both ways and handles content replication by using Distributed File System Replication (DFSR) if you use <strong>Local Content Infrastructure</strong> or uses a central location to manage the content with <strong>Shared Network Content Infrastructure</strong>.</p>
+<h2 id="nopcommerce-configuration">NitroSmart configuration</h2>
+<p>First of all, you have to configure the initial settings of your web farm in IIS and add the first instance of your NitroSmart store there. Then, you have to configure a few settings in the NitroSmart admin area to allow NitroSmart to work with web farms:</p>
 <ol>
 <li><p>Go to <strong>Configuration → Settings → All settings (advanced)</strong>. Find the <strong>mediasettings.useabsoluteimagepath</strong> setting and change its value to <em>false</em></p>
 </li>
@@ -119,12 +119,12 @@
 </li>
 <li><p>Since our web farm utilizes Application Request Routing (ARR) to control traffic using a proxy server, select the <strong>Use proxy servers</strong> checkbox</p>
 </li>
-<li><p>Click the <strong>Save</strong> button. The nopCommerce application will be restarted.</p>
+<li><p>Click the <strong>Save</strong> button. The NitroSmart application will be restarted.</p>
 </li>
 </ol>
 <h2 id="web-farm-configuration">Web farm configuration</h2>
 <h3 id="admin-area-redirection-rule">Admin area redirection rule</h3>
-<p>Since a web farm hosts multiple instances of an application, you need to choose one of the nopCommerce instances as a primary one to avoid file locking. This primary node will process requests from the admin panel.</p>
+<p>Since a web farm hosts multiple instances of an application, you need to choose one of the NitroSmart instances as a primary one to avoid file locking. This primary node will process requests from the admin panel.</p>
 <p>The rule should look as follows:</p>
 <pre><code class="lang-xml">&lt;rule name=&quot;Admin Area&quot; enabled=&quot;true&quot; patternSyntax=&quot;ECMAScript&quot; stopProcessing=&quot;true&quot;&gt;
     &lt;match url=&quot;^(admin(/.*)?)$|^(lib_npm/.+)$&quot; /&gt;
@@ -153,7 +153,7 @@
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>In some cases, ARR has issues handling URLs of javascript files containing more than one “.” symbol. For example, it can affect minified js-files ending with <code>.min.js</code>. To avoid errors when processing such files, we recommend directly routing these requests to one of the nopCommerce instances. As you can see in the examples above, we do this for the whole <code>lib_npm</code> directory by routing to the primary instance.</p>
+<p>In some cases, ARR has issues handling URLs of javascript files containing more than one “.” symbol. For example, it can affect minified js-files ending with <code>.min.js</code>. To avoid errors when processing such files, we recommend directly routing these requests to one of the NitroSmart instances. As you can see in the examples above, we do this for the whole <code>lib_npm</code> directory by routing to the primary instance.</p>
 </div>
 <p>When the configuration is finished, add new instances to your web farm.</p>
 <h3 id="file-replication">File replication</h3>
@@ -166,7 +166,7 @@
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>All actions that assume restarting the nopCommerce application (for example, plugin installation, updating of the app settings), require manual restarting of all application pools related to the web farm.</p>
+<p>All actions that assume restarting the NitroSmart application (for example, plugin installation, updating of the app settings), require manual restarting of all application pools related to the web farm.</p>
 </div>
             </article>
           </div>

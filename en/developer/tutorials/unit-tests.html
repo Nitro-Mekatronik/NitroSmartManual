@@ -100,7 +100,7 @@
 <li><a href="https://docs.microsoft.com/dotnet/core/testing/unit-testing-best-practices">https://docs.microsoft.com/dotnet/core/testing/unit-testing-best-practices</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></li>
 </ul>
-<p>In this article, we will get acquainted with the features of testing in the nopCommerce project and learn how to add new tests and check their performance. We won't test an abstract task but will write a full-fledged test for the existing functionality from scratch. At the end of the article, you will be provided with a reference to the appropriate commit with all described code changes.</p>
+<p>In this article, we will get acquainted with the features of testing in the NitroSmart project and learn how to add new tests and check their performance. We won't test an abstract task but will write a full-fledged test for the existing functionality from scratch. At the end of the article, you will be provided with a reference to the appropriate commit with all described code changes.</p>
 <h2 id="features-overview">Features overview</h2>
 <p><img src="static/unit-tests/tests-project.jpg" alt="tests-project"></p>
 <p>On the screenshot, you can see the structure of the Nop.Tests project. The folders such as <code>Nop.Core.Tests</code> contain tests for the corresponding projects of the solution. The other files are responsible for the auxiliary and base classes. Let's look at the <code>BaseNopTest</code> class.</p>
@@ -132,7 +132,7 @@
     System.Threading.Tasks.Task UpdateTaskAsync(ScheduleTask task);
 }
 </code></pre>
-<p>As you can see this is a simple interface. But at the same time, it allows nopCommerce to perform very important tasks such as sending email messages to customers. So we need to be sure that it works properly. Next, we will write tests for each of the interface methods.</p>
+<p>As you can see this is a simple interface. But at the same time, it allows NitroSmart to perform very important tasks such as sending email messages to customers. So we need to be sure that it works properly. Next, we will write tests for each of the interface methods.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>We don't use <strong>TDD</strong> but we are not against this approach. The reliability of the functionality is important for us, and not a specific approach to testing.</p>
@@ -149,7 +149,7 @@ namespace Nop.Tests.Nop.Services.Tests.Tasks
     }
 }
 </code></pre>
-<p>This is the class template for testing. From this code, we can see that nopCommerce uses the <strong>NUnit framework</strong> for tests.
+<p>This is the class template for testing. From this code, we can see that NitroSmart uses the <strong>NUnit framework</strong> for tests.
 There are two points to pay attention to:</p>
 <ol>
 <li>Our class has the <strong>TestFixture</strong> attribute which tells the engine that this class is a class with tests.</li>
@@ -332,13 +332,13 @@ public async System.Threading.Tasks.Task TearDown()
         await _scheduleTaskService.DeleteTaskAsync(task);
 }
 </code></pre>
-<p>That's it, our test class is ready. As I promised at the beginning, you can find the entire class at <a href="https://github.com/nopSolutions/nopCommerce/blob/develop/src/Tests/Nop.Tests/Nop.Services.Tests/Tasks/ScheduleTaskServiceTests.cs">this link</a> and the commit with its addition by <a href="https://github.com/nopSolutions/nopCommerce/commit/81c31e1ee754f771ddfdc26e9b95a729e38b2d29">this link</a>.</p>
+<p>That's it, our test class is ready. As I promised at the beginning, you can find the entire class at <a href="https://github.com/nopSolutions/NitroSmart/blob/develop/src/Tests/Nop.Tests/Nop.Services.Tests/Tasks/ScheduleTaskServiceTests.cs">this link</a> and the commit with its addition by <a href="https://github.com/nopSolutions/NitroSmart/commit/81c31e1ee754f771ddfdc26e9b95a729e38b2d29">this link</a>.</p>
 
                   <div class="course-banner">
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

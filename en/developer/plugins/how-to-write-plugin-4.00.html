@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to write a plugin for nopCommerce </title>
+    <title>How to write a plugin for NitroSmart </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to write a plugin for nopCommerce ">
+    <meta name="title" content="How to write a plugin for NitroSmart ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -92,12 +92,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="en/developer/plugins/how-to-write-plugin-4.00">
-<h1 id="how-to-write-a-plugin-for-nopcommerce-400">How to write a plugin for nopCommerce 4.00</h1>
+<h1 id="how-to-write-a-plugin-for-nopcommerce-400">How to write a plugin for NitroSmart 4.00</h1>
 
 <blockquote>
 <p>In computing, a plug-in (or plugin) is a set of software components that add specific abilities to a larger software application (Wikipedia).</p>
 </blockquote>
-<p>Plugins are used to extend the functionality of nopCommerce. nopCommerce has several types of plugins. For example, payment methods (such as PayPal), tax providers, shipping method computation methods (such as UPS, USP, FedEx), widgets (such as 'live chat' block), and many others. nopCommerce is already distributed with many different plugins. You can also search various plugins on the <a href="https://www.nopcommerce.com/marketplace">nopCommerce official site</a> to see if someone has already created a plugin that suits your needs. If not, this article will guide you through the process of creating your plugin.</p>
+<p>Plugins are used to extend the functionality of NitroSmart. NitroSmart has several types of plugins. For example, payment methods (such as PayPal), tax providers, shipping method computation methods (such as UPS, USP, FedEx), widgets (such as 'live chat' block), and many others. NitroSmart is already distributed with many different plugins. You can also search various plugins on the <a href="https://www.nopcommerce.com/marketplace">NitroSmart official site</a> to see if someone has already created a plugin that suits your needs. If not, this article will guide you through the process of creating your plugin.</p>
 <h2 id="the-plugin-structure-required-files-and-locations">The plugin structure, required files, and locations</h2>
 <ol>
 <li><p>First thing you need to do is to create a new &quot;Class Library&quot; project in the solution. It's a good practice to place all plugins into the <code>\Plugins</code> directory in the root of your solution (do not mix up with \Plugins subdirectory located in <code>\Nop.Web</code> directory which is used for already deployed plugins). It's a good practice to place all plugins into the &quot;Plugins&quot; solution folder (you can find more information about solution folders <a href="http://msdn.microsoft.com/library/sx2027y2.aspx">here</a>).</p>
@@ -129,7 +129,7 @@
 </li>
 <li><p>The next step is creating a <code>plugin.json</code> file required for each plugin. This file contains meta-information describing your plugin. Just copy this file from any other existing plugin and modify it for your needs. For information about the <code>plugin.json</code> file, please see <a class="xref" href="plugin.json.html">plugin.json file</a>.</p>
 </li>
-<li><p>The last required step is to create a class that implements the <code>IPlugin</code> interface (Nop.Core.Plugins namespace). nopCommerce has the <code>BasePlugin</code> class which already implements some <code>IPlugin</code> methods and allows you to avoid source code duplication. nopCommerce also provides you with some specific interfaces derived from <code>IPlugin</code>. For example, we have the &quot;IPaymentMethod&quot; interface which is used for creating new payment method plugins. It contains some methods which are specific only for payment methods such as <code>ProcessPayment()</code> or <code>GetAdditionalHandlingFee()</code>. Currently, nopCommerce has the following specific plugin interfaces:</p>
+<li><p>The last required step is to create a class that implements the <code>IPlugin</code> interface (Nop.Core.Plugins namespace). NitroSmart has the <code>BasePlugin</code> class which already implements some <code>IPlugin</code> methods and allows you to avoid source code duplication. NitroSmart also provides you with some specific interfaces derived from <code>IPlugin</code>. For example, we have the &quot;IPaymentMethod&quot; interface which is used for creating new payment method plugins. It contains some methods which are specific only for payment methods such as <code>ProcessPayment()</code> or <code>GetAdditionalHandlingFee()</code>. Currently, NitroSmart has the following specific plugin interfaces:</p>
 <ul>
 <li><strong>IPaymentMethod</strong>. These plugins are used for payment processing.</li>
 <li><strong>IShippingRateComputationMethod</strong>. These plugins are used for retrieving accepted delivery methods and appropriate shipping rates. For example, UPS, UPS, FedEx, etc.</li>
@@ -210,7 +210,7 @@
 <h2 id="routes">Routes</h2>
 <p>Here we will have a look at how to register plugin routes. ASP.NET Core routing is responsible for mapping incoming browser requests to particular MVC controller actions. You can find more information about routing <a href="https://docs.microsoft.com/aspnet/core/fundamentals/routing">here</a>. So follow the next steps:</p>
 <ul>
-<li><p>If you need to add some custom route, then create the <code>RouteProvider.cs</code> file. It informs the nopCommerce system about plugin routes. For example, the following RouteProvider class adds a new route which can be accessed by opening your web browser and navigating to <code>http://www.yourStore.com/Plugins/PaymentPayPalStandard/PDTHandler</code> URL (used by PayPal plugin):</p>
+<li><p>If you need to add some custom route, then create the <code>RouteProvider.cs</code> file. It informs the NitroSmart system about plugin routes. For example, the following RouteProvider class adds a new route which can be accessed by opening your web browser and navigating to <code>http://www.yourStore.com/Plugins/PaymentPayPalStandard/PDTHandler</code> URL (used by PayPal plugin):</p>
 <pre><code class="lang-csharp">public partial class RouteProvider : IRouteProvider
 {
     public void RegisterRoutes(IRouteBuilder routeBuilder)
@@ -229,16 +229,16 @@
 </code></pre>
 </li>
 </ul>
-<h2 id="upgrading-nopcommerce-may-break-plugins">Upgrading nopCommerce may break plugins</h2>
-<p>Some plugins may become outdated and no longer work with the newer version of nopCommerce. If you have issues after upgrading to the newer version, delete the plugin and visit the official nopCommerce website to see if a newer version is available. Many plugin authors will upgrade their plugins to accommodate the newer version, however, some will not and their plugin will become obsolete with the improvements in nopCommerce. But in most cases, you can simply open an appropriate <code>plugin.json</code> file and update the <strong>SupportedVersions</strong> field.</p>
+<h2 id="upgrading-nopcommerce-may-break-plugins">Upgrading NitroSmart may break plugins</h2>
+<p>Some plugins may become outdated and no longer work with the newer version of NitroSmart. If you have issues after upgrading to the newer version, delete the plugin and visit the official NitroSmart website to see if a newer version is available. Many plugin authors will upgrade their plugins to accommodate the newer version, however, some will not and their plugin will become obsolete with the improvements in NitroSmart. But in most cases, you can simply open an appropriate <code>plugin.json</code> file and update the <strong>SupportedVersions</strong> field.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Hopefully, this will get you started with nopCommerce and prepare you to build more elaborate plugins.</p>
+<p>Hopefully, this will get you started with NitroSmart and prepare you to build more elaborate plugins.</p>
 
                   <div class="course-banner">
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/developer/plugins/plugin_json">
 <h1 id="description-of-the-structure-of-the-pluginjson-file">Description of the structure of the <code>plugin.json</code> file</h1>
 
-<p>This file contains the Meta information description for a plugin that is used by nopCommerce to determine which group this plugin belongs to if the plugin is compatible with the current version of nopCommerce or not, what is the version of the plugin and several other information. Each nopCommerce plugin must have this file.</p>
+<p>This file contains the Meta information description for a plugin that is used by NitroSmart to determine which group this plugin belongs to if the plugin is compatible with the current version of NitroSmart or not, what is the version of the plugin and several other information. Each NitroSmart plugin must have this file.</p>
 <h2 id="file-structure">File Structure</h2>
 <pre><code class="lang-json">{
   &quot;Group&quot;: &quot;Payment methods&quot;,
@@ -102,22 +102,22 @@
   &quot;SystemName&quot;: &quot;Payments.PayPalCommerce&quot;,
   &quot;Version&quot;: &quot;1.16&quot;,
   &quot;SupportedVersions&quot;: [ &quot;4.60&quot; ],
-  &quot;Author&quot;: &quot;nopCommerce team&quot;,
+  &quot;Author&quot;: &quot;NitroSmart team&quot;,
   &quot;DisplayOrder&quot;: -1,
   &quot;FileName&quot;: &quot;Nop.Plugin.Payments.PayPalCommerce.dll&quot;,
   &quot;Description&quot;: &quot;&quot;
 }
 </code></pre>
 <ul>
-<li><p><strong>Group</strong>. It is used by nopCommerce to identify or search or filter plugins by their group name in the plugin list under the <code>Admin/Configuration/LocalPlugin</code> menu. This may be your company name.</p>
+<li><p><strong>Group</strong>. It is used by NitroSmart to identify or search or filter plugins by their group name in the plugin list under the <code>Admin/Configuration/LocalPlugin</code> menu. This may be your company name.</p>
 </li>
 <li><p><strong>FriendlyName</strong>. It is the display name for the plugin. It is used to identify our plugin from the plugin list.</p>
 </li>
-<li><p><strong>SystemName</strong>. It is used by nopCommerce to identify the plugin uniquely, so it needs to be unique from all other plugins. We cannot register more than one plugin with the same <code>SystemName</code>.</p>
+<li><p><strong>SystemName</strong>. It is used by NitroSmart to identify the plugin uniquely, so it needs to be unique from all other plugins. We cannot register more than one plugin with the same <code>SystemName</code>.</p>
 </li>
-<li><p><strong>Version</strong>. This is the version number of the plugin, you can set this to any value you like. This number is used to identify which version of the plugin is currently installed in the nopCommerce application.</p>
+<li><p><strong>Version</strong>. This is the version number of the plugin, you can set this to any value you like. This number is used to identify which version of the plugin is currently installed in the NitroSmart application.</p>
 </li>
-<li><p><strong>SupportedVersions</strong>. It is an array of strings. It contains one or more than one version of nopCommerce that this plugin is supported on or we can say this plugin is a target for. During development ensure that the current version of nopCommerce in which you are developing this plugin is included in this list, otherwise, it will not be loaded in the plugin list.</p>
+<li><p><strong>SupportedVersions</strong>. It is an array of strings. It contains one or more than one version of NitroSmart that this plugin is supported on or we can say this plugin is a target for. During development ensure that the current version of NitroSmart in which you are developing this plugin is included in this list, otherwise, it will not be loaded in the plugin list.</p>
 </li>
 <li><p><strong>Author</strong>. This is the information about the creator of the plugin. It may be a personal name or a company name or a team who created this plugin.</p>
 </li>
@@ -138,7 +138,7 @@
 <h5>Tip</h5>
 <p>After you edit your <strong>plugin.json</strong> file's content you need to set its <code>Copy to Output Directory</code> property value to <code>Copy if newer</code>.
 <img src="static/plugin.json/plugin_json_0.jpg" alt="image3">
-It is required because we need this file to be copied to the compiled directory from where nopCommerce can access this file to display our plugin in the plugin list in the admin panel.</p>
+It is required because we need this file to be copied to the compiled directory from where NitroSmart can access this file to display our plugin in the plugin list in the admin panel.</p>
 </div>
 <h2 id="examples">Examples</h2>
 <ul>
@@ -149,7 +149,7 @@ It is required because we need this file to be copied to the compiled directory 
       &quot;SystemName&quot;: &quot;Tax.FixedOrByCountryStateZip&quot;,
       &quot;Version&quot;: &quot;1.44&quot;,
       &quot;SupportedVersions&quot;: [ &quot;4.60&quot; ],
-      &quot;Author&quot;: &quot;nopCommerce team&quot;,
+      &quot;Author&quot;: &quot;NitroSmart team&quot;,
       &quot;DisplayOrder&quot;: 1,
       &quot;FileName&quot;: &quot;Nop.Plugin.Tax.FixedOrByCountryStateZip.dll&quot;,
       &quot;Description&quot;: &quot;This plugin allow to configure fix tax rates or tax rates by countries, states and zip codes&quot;
@@ -163,7 +163,7 @@ It is required because we need this file to be copied to the compiled directory 
       &quot;SystemName&quot;: &quot;Widgets.GoogleAnalytics&quot;,
       &quot;Version&quot;: &quot;1.76&quot;,
       &quot;SupportedVersions&quot;: [ &quot;4.60&quot; ],
-      &quot;Author&quot;: &quot;nopCommerce team, Nicolas Muniere&quot;,
+      &quot;Author&quot;: &quot;NitroSmart team, Nicolas Muniere&quot;,
       &quot;DisplayOrder&quot;: 1,
       &quot;FileName&quot;: &quot;Nop.Plugin.Widgets.GoogleAnalytics.dll&quot;,
       &quot;Description&quot;: &quot;This plugin integrates with Google Analytics. It keeps track of statistics about    the visitors and ecommerce conversion on your website&quot;
@@ -176,7 +176,7 @@ It is required because we need this file to be copied to the compiled directory 
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

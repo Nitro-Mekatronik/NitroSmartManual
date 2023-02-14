@@ -95,7 +95,7 @@
 <h1 id="the-settings-from-the-appsettingsjson-file">The settings from the appsettings.json file</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This article contains the description of the <em>appsettings.json</em> file. In this article, we will explain what settings are available in this file, what they are used for, and how to use these settings to change the functionality/behavior of the nopCommerce project.</p>
+<p>This article contains the description of the <em>appsettings.json</em> file. In this article, we will explain what settings are available in this file, what they are used for, and how to use these settings to change the functionality/behavior of the NitroSmart project.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>All settings can be overridden in environment variables.</p>
@@ -131,7 +131,7 @@ For example connection string for <strong>SqlServer</strong> look like this:</p>
 </li>
 </ul>
 <h3 id="azureblobconfig">AzureBlobConfig</h3>
-<p>We can use <em>Azure Blob Storage</em> to store blob data. nopCommerce already has a feature integrated for that, we just need to set the following information correctly to use/enable this feature. Values for these settings can be obtained for <em>Azure</em> while you create the storage account.</p>
+<p>We can use <em>Azure Blob Storage</em> to store blob data. NitroSmart already has a feature integrated for that, we just need to set the following information correctly to use/enable this feature. Values for these settings can be obtained for <em>Azure</em> while you create the storage account.</p>
 <ul>
 <li><strong>ConnectionString</strong> This setting expects a string value. Here you need to add your <code>AzureBlobStorage</code> connection string</li>
 <li><strong>ContainerName</strong> Value for this setting is also of type string. In this setting, we set the container name for <em>Azure BLOB storage</em>.</li>
@@ -149,7 +149,7 @@ For example connection string for <strong>SqlServer</strong> look like this:</p>
 <li><strong>BundledFilesCacheTime</strong> This setting is used when the function of combining CSS and/or js files into one is activated, to control the cache lifetime for them. The default is <strong><code>120</code></strong> minutes.</li>
 </ul>
 <h3 id="commonconfig">CommonConfig</h3>
-<p><em>CommonConfig</em> contains settings used to configure the behavior of nopCommerce itself. It is a JSON object and contains some properties settings which can be tweaked to change the behavior of nopCommerce.</p>
+<p><em>CommonConfig</em> contains settings used to configure the behavior of NitroSmart itself. It is a JSON object and contains some properties settings which can be tweaked to change the behavior of NitroSmart.</p>
 <ul>
 <li><p><strong>DisplayFullErrorStack</strong> This setting expects a boolean value. The default value is <strong><code>false</code></strong>. You can set the value to <strong><code>true</code></strong> if you want to see the full error in the production environment. Which is not what we usually suggest. But if you have a good reason to show full error during the production environment then you can do it from this setting. For the development environment this setting is ignored and whatever the value you set for this setting full error will be shown. We can say that this setting is always enabled for a development environment.</p>
 </li>
@@ -175,7 +175,7 @@ For example connection string for <strong>SqlServer</strong> look like this:</p>
 <pre><code class="lang-powershell">public,max-age=31536000
 </code></pre>
 </li>
-<li><p><strong>SupportPreviousNopcommerceVersions</strong> setting specifies the value indicating whether we should support previous nopCommerce versions. In this case, old URLs, from previous nopCommerce versions, will redirect to new ones. Enable it only if you upgraded from one of the previous nopCommerce versions. The default value is <strong><code>true</code></strong>.</p>
+<li><p><strong>SupportPreviousNopcommerceVersions</strong> setting specifies the value indicating whether we should support previous NitroSmart versions. In this case, old URLs, from previous NitroSmart versions, will redirect to new ones. Enable it only if you upgraded from one of the previous NitroSmart versions. The default value is <strong><code>true</code></strong>.</p>
 </li>
 <li><p><strong>PluginStaticFileExtensionsBlacklist</strong> Specify the blacklist of the static file extensions for plugin directories.</p>
 </li>
@@ -193,7 +193,7 @@ For example connection string for <strong>SqlServer</strong> look like this:</p>
 <pre><code class="lang-sh">dotnet sql-cache create &quot;Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DistCache;Integrated Security=True;&quot; dbo nopCache
 </code></pre>
 <ul>
-<li><strong>Redis</strong> nopCommerce supports <em>Redis</em> out of the box. To enable the <em>Redis</em> in our application we must set the appropriate value for the following settings. For more information about <a href="https://azure.microsoft.com/documentation/articles/cache-dotnet-how-to-use-azure-redis-cache">Redis</a>.</li>
+<li><strong>Redis</strong> NitroSmart supports <em>Redis</em> out of the box. To enable the <em>Redis</em> in our application we must set the appropriate value for the following settings. For more information about <a href="https://azure.microsoft.com/documentation/articles/cache-dotnet-how-to-use-azure-redis-cache">Redis</a>.</li>
 </ul>
 </li>
 <li><p><strong>Enabled</strong> This setting expects a boolean value. Set the value to <strong><code>true</code></strong> if you want to enable <code>Distributed cache</code>. The system uses In-Memory caching, so this setting is used to indicate whether we should use <code>Distributed Cache</code> for caching, instead of the default <code>in-memory caching</code>. So, use this setting if you want to use for example <em>Redis</em> for caching.</p>
@@ -216,7 +216,7 @@ For example connection string for <strong>SqlServer</strong> look like this:</p>
 <li><strong>KnownProxies</strong> This setting expects a string value. Specify a list of IP addresses (comma separated) to accept forwarded headers.</li>
 </ul>
 <h3 id="installationconfig">InstallationConfig</h3>
-<p>It contains settings that are used to configure the behavior of nopCommerce during the nopCommerce installation.</p>
+<p>It contains settings that are used to configure the behavior of NitroSmart during the NitroSmart installation.</p>
 <ul>
 <li><strong>DisableSampleData</strong> This setting expects a boolean value. This setting indicates whether a store owner can install sample data during installation. If you don't want the store owner to install sample data during installation then just set the value for this setting to <strong><code>true</code></strong>.</li>
 <li><strong>DisabledPlugins</strong> This setting expects a string value. Specify a list of plugins (comma separated) ignored during installation.</li>
@@ -261,7 +261,7 @@ based caching is enabled (by default <strong><code>true</code></strong>).</li>
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

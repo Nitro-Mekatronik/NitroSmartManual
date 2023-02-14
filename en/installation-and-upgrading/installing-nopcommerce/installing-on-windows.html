@@ -94,24 +94,24 @@
             <article class="content wrap" id="_content" data-uid="en/installation-and-upgrading/installing-nopcommerce/installing-on-windows">
 <h1 id="installing-on-windows">Installing on Windows</h1>
 
-<p>This chapter describes how to download nopCommerce software, upload it to your server and install it. You can also watch the screencast about nopCommerce installation on our <a href="https://www.youtube.com/watch?v=L7NGodeB9sQ">YouTube channel</a>.</p>
-<p>Before you begin the installation, ensure that your web host meets the <a class="xref" href="../technology-and-system-requirements.html">minimum requirements to run nopCommerce</a>.</p>
+<p>This chapter describes how to download NitroSmart software, upload it to your server and install it. You can also watch the screencast about NitroSmart installation on our <a href="https://www.youtube.com/watch?v=L7NGodeB9sQ">YouTube channel</a>.</p>
+<p>Before you begin the installation, ensure that your web host meets the <a class="xref" href="../technology-and-system-requirements.html">minimum requirements to run NitroSmart</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>For more information on hosting selection guidelines, visit <a class="xref" href="choose-a-hosting-company.html">this page</a>.</p>
 </div>
-<h2 id="download-nopcommerce">Download nopCommerce</h2>
-<p>To install nopCommerce on Windows you should download it first. Go to <a href="https://www.nopcommerce.com/download-nopcommerce">download page</a> and choose the <strong>Package without source code</strong> version for Windows. This is a precompiled version of nopCommerce that can simply be uploaded to your hosting provider and used immediately.</p>
-<h2 id="upload-the-nopcommerce-files">Upload the nopCommerce files</h2>
-<p>The next step is to upload the nopCommerce files to your server. To do this, you need to use an FTP connection, which allows transferring files between computers. Follow these steps to set this up:</p>
+<h2 id="download-nopcommerce">Download NitroSmart</h2>
+<p>To install NitroSmart on Windows you should download it first. Go to <a href="https://www.nopcommerce.com/download-nopcommerce">download page</a> and choose the <strong>Package without source code</strong> version for Windows. This is a precompiled version of NitroSmart that can simply be uploaded to your hosting provider and used immediately.</p>
+<h2 id="upload-the-nopcommerce-files">Upload the NitroSmart files</h2>
+<p>The next step is to upload the NitroSmart files to your server. To do this, you need to use an FTP connection, which allows transferring files between computers. Follow these steps to set this up:</p>
 <ol>
 <li>Choose and download one of the FTP client applications that you will use for transferring files.</li>
 <li>Find your FTP credentials in your hosting control panel.</li>
 <li>In your FTP client application, set up the connection between your computer and the server using the FTP credentials you found in the previous step.</li>
-<li>Upload the nopCommerce files to the server.</li>
+<li>Upload the NitroSmart files to the server.</li>
 </ol>
 <h2 id="create-a-database">Create a database</h2>
-<p>Before running nopCommerce, create a new database instance in your hosting control panel. This database will be used to store your website data.</p>
+<p>Before running NitroSmart, create a new database instance in your hosting control panel. This database will be used to store your website data.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>When creating the database, choose MS SQL Server version <em>2012</em> or <em>above</em> if requested.</p>
@@ -119,10 +119,10 @@
 <p>We will use the name, server name (or IP, URL), user login, and password of your database during the installation process later. These credentials are required for the database connection.</p>
 <h2 id="create-a-new-website">Create a new website</h2>
 <p>Create a new website in your hosting control panel. Then find a URL that allows you to access this site.</p>
-<h2 id="install-nopcommerce">Install nopCommerce</h2>
+<h2 id="install-nopcommerce">Install NitroSmart</h2>
 <p>Using the URL from the previous step, access the website from your browser.
 Once you open the site for the first time, you will be redirected to the installation page as follows:
-<img src="static/installing-local/installation.jpg" alt="nopCommerce installation"></p>
+<img src="static/installing-local/installation.jpg" alt="NitroSmart installation"></p>
 <p>In the <em>Store information</em> panel, fill the following details:</p>
 <ul>
 <li><strong>Admin user email</strong>: this is the email address of the first admin of the site.</li>
@@ -139,11 +139,11 @@ Once you open the site for the first time, you will be redirected to the install
 </ul>
 <p>In the <em>Database information</em> panel, you need to enter the following info:</p>
 <ul>
-<li><strong>Database</strong>: here you can select either Microsoft SQL Server, MySQL, or PostgreSQL. Choose the first one if you are installing nopCommerce on Windows.</li>
+<li><strong>Database</strong>: here you can select either Microsoft SQL Server, MySQL, or PostgreSQL. Choose the first one if you are installing NitroSmart on Windows.</li>
 <li><strong>Create database if it doesn't exist</strong>: it is recommended that you create your database and database user beforehand to ensure a successful installation. Simply create a database instance and add the database user to it. The installation process will create all the tables, stored procedures, and more.</li>
 <li><strong>Enter raw connection string (advanced)</strong>: select this checkbox if you want to enter a <strong>Connection string</strong> instead of filling the connection fields.</li>
 <li><strong>Server name</strong>: this is the IP, URL, or server name of your database. Get your server name from the hosting control panel.</li>
-<li><strong>Database name</strong>: this is the name of the database used by nopCommerce. If you opted to create your database ahead of time, use its name here.</li>
+<li><strong>Database name</strong>: this is the name of the database used by NitroSmart. If you opted to create your database ahead of time, use its name here.</li>
 <li><strong>Use integrated Windows authentication</strong>: if you are installing at a hosting provider, you don't need this option.</li>
 <li><strong>SQL Username</strong>: enter your database user login.</li>
 <li><strong>SQL Password</strong>: enter your database user password.</li>
@@ -156,7 +156,7 @@ Once you open the site for the first time, you will be redirected to the install
 </div>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>If you want to completely reset a nopCommerce site to its default settings, you can delete the <code>appsettings.json</code> file from the <code>App_Data</code> directory.</p>
+<p>If you want to completely reset a NitroSmart site to its default settings, you can delete the <code>appsettings.json</code> file from the <code>App_Data</code> directory.</p>
 </div>
             </article>
           </div>

@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/developer/tutorials/update-existing-entity">
 <h1 id="updating-an-existing-entity-how-to-add-a-new-property">Updating an existing entity. How to add a new property</h1>
 
-<p>This tutorial covers how to add a property to the &quot;Category&quot; entity that ships with the nopCommerce source code.</p>
+<p>This tutorial covers how to add a property to the &quot;Category&quot; entity that ships with the NitroSmart source code.</p>
 <h2 id="the-data-model">The data model</h2>
 <p>Entities will have two classes that are used to map records to a table. The first class defines the properties, fields, and methods consumed by the web application.</p>
 <pre><code class="lang-sh">File System Location: [Project Root]\Libraries\Nop.Core\Domain\Catalog\Category.cs
@@ -178,7 +178,7 @@ Assembly: Nop.Web
  &lt;/div&gt;
 </code></pre>
 <h2 id="the-controller">The controller</h2>
-<p>In this case, the controller is responsible for mapping the domain data model to our view model and vice versa. The reason I choose the category model to update is because of its simplicity. I want this to be an introduction to the nopCommerce platform and I would like to keep it as simple as possible.</p>
+<p>In this case, the controller is responsible for mapping the domain data model to our view model and vice versa. The reason I choose the category model to update is because of its simplicity. I want this to be an introduction to the NitroSmart platform and I would like to keep it as simple as possible.</p>
 <pre><code class="lang-sh">File System Location: [Project Root]\Presentation\Nop.Web\Areas\Admin\Controllers\CategoryController.cs
 Assembly: Nop.Admin
 Solution Location:
@@ -198,7 +198,7 @@ category.SomeNewProperty = model.SomeNewProperty;
 </code></pre>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <ul>
-<li>Recreate the database. Either your custom SQL script or use the nopCommerce installer.</li>
+<li>Recreate the database. Either your custom SQL script or use the NitroSmart installer.</li>
 <li>Stop the development web server between schema changes.</li>
 <li>Post a detailed comment on <a href="http://www.nopcommerce.com/boards/">our forums</a>.</li>
 </ul>
@@ -207,7 +207,7 @@ category.SomeNewProperty = model.SomeNewProperty;
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

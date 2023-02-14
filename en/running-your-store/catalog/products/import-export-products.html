@@ -94,7 +94,7 @@
             <article class="content wrap" id="_content" data-uid="en/running-your-store/catalog/products/import-export-products">
 <h1 id="importexport-products">Import/export products</h1>
 
-<p>nopCommerce supports importing from Excel format and exporting products in XML or Excel. You can download products from your catalog in PDF.
+<p>NitroSmart supports importing from Excel format and exporting products in XML or Excel. You can download products from your catalog in PDF.
 You can find these options in <strong>Catalog → Products</strong> on the main page, top left.</p>
 <p><img src="static/import-export-products/buttons.jpg" alt="Products"></p>
 <h2 id="exporting-products">Exporting products</h2>
@@ -121,7 +121,7 @@ You can find these options in <strong>Catalog → Products</strong> on the main 
 <p>Then click <strong>Import</strong>, choose the file, and click the <strong>Import from Excel</strong> button. Then check if you have a new product in the catalog.</p>
 <p><img src="static/import-export-products/product_catalog.png" alt="product catalog"></p>
 <h2 id="importing-products-with-images-hosted-on-external-resources">Importing products with images hosted on external resources</h2>
-<p>Sometimes it is necessary to import products with images that are hosted on external resources. nopCommerce supports such a scenario. However, this option is disabled by default for security purposes. You can enable it on the <strong>&quot;Catalog settings&quot;</strong> page in the administration area. Just enable the <strong>&quot;Export/import products. Allow download images&quot;</strong> setting.</p>
+<p>Sometimes it is necessary to import products with images that are hosted on external resources. NitroSmart supports such a scenario. However, this option is disabled by default for security purposes. You can enable it on the <strong>&quot;Catalog settings&quot;</strong> page in the administration area. Just enable the <strong>&quot;Export/import products. Allow download images&quot;</strong> setting.</p>
 <p>There is an address validation code provided by the .NET platform in this image loading method. This mechanism doesn't always correctly determine the correctness of addresses despite their full compliance with the <a href="https://datatracker.ietf.org/doc/html/rfc3986">RFC3986</a> specification. Our recommendation is to avoid using special characters, such as <strong>^</strong> or <strong>~</strong>, in URLs. So please ensure that all specified URLs contain Latin chars only.</p>
 <h2 id="importing-product-with-categories-and-manufacturers">Importing product with categories and manufacturers</h2>
 <p>The task of importing categories and manufacturers is specific because a product can belong to multiple categories or manufacturers. Each new value in this cell must be separated by the <strong>;</strong> character. Please avoid using spaces for formatting even though they should be ignored by the algorithm (for example, 1;2;3 is better than 1; 2; 3).</p>

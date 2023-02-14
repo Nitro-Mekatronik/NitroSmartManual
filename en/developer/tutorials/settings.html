@@ -94,13 +94,13 @@
             <article class="content wrap" id="_content" data-uid="en/developer/tutorials/settings">
 <h1 id="settings-api">Settings API</h1>
 
-<p>Like any other website platform, nopCommerce has settings such as &quot;Store name&quot; or &quot;One page checkout enabled&quot;. There are two ways to manage settings in nopCommerce.</p>
+<p>Like any other website platform, NitroSmart has settings such as &quot;Store name&quot; or &quot;One page checkout enabled&quot;. There are two ways to manage settings in NitroSmart.</p>
 <p>You can use <strong>GetSettingByKeyAsync</strong> and <strong>SetSettingAsync</strong> methods of <strong>ISettingService</strong> implementation for loading and saving individual settings.</p>
 <pre><code class="lang-csharp">var setting = await GetSettingByKeyAsync&lt;string&gt;(key);
 ...
 await _settingService.SetSettingAsync(key, value);
 </code></pre>
-<p>The preferred approach for handling settings in nopCommerce is to create a new implementation of the <strong>ISettings</strong> interface. Each setting will be represented by a C# property and developers should rely on setting classes to be injected via the constructor when they are required. Below is an example settings class.</p>
+<p>The preferred approach for handling settings in NitroSmart is to create a new implementation of the <strong>ISettings</strong> interface. Each setting will be represented by a C# property and developers should rely on setting classes to be injected via the constructor when they are required. Below is an example settings class.</p>
 <pre><code class="lang-csharp">public partial class MediaSettings : ISettings
     {
         public int AvatarPictureSize { get; set; }
@@ -135,7 +135,7 @@ await _settingService.SetSettingAsync(key, value);
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

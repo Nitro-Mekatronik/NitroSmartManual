@@ -94,11 +94,11 @@
             <article class="content wrap" id="_content" data-uid="en/developer/plugins/plugin-with-data-access">
 <h1 id="plugin-with-data-access">Plugin with data access</h1>
 
-<p>In this tutorial, I'll be using the nopCommerce plugin architecture to implement a product view tracker. Before we begin with the development you must read, understood, and completed the tutorials listed below. I'll be skipping over some explanations covered in the previous articles, but you can recap using the links provided.</p>
+<p>In this tutorial, I'll be using the NitroSmart plugin architecture to implement a product view tracker. Before we begin with the development you must read, understood, and completed the tutorials listed below. I'll be skipping over some explanations covered in the previous articles, but you can recap using the links provided.</p>
 <ul>
 <li><a class="xref" href="../tutorials/index.html">Developer tutorials</a></li>
 <li><a class="xref" href="../tutorials/update-existing-entity.html">Updating an existing entity. How to add a new property.</a></li>
-<li><a class="xref" href="how-to-write-plugin-4.60.html">How to write a plugin for nopCommerce 4.60</a></li>
+<li><a class="xref" href="how-to-write-plugin-4.60.html">How to write a plugin for NitroSmart 4.60</a></li>
 </ul>
 <p>We will start coding with the data access layer, move on to the service layer, and finally end on dependency injection.</p>
 <h2 id="getting-started">Getting started</h2>
@@ -109,7 +109,7 @@
 <p>For information about the <code>plugin.json</code> file, please see <a class="xref" href="plugin.json.html">plugin.json file</a>.</p>
 </div>
 <p>Then add references to the <strong>Nop.Web.Framework</strong> projects. This will be enough for us, as other dependencies, such as <strong>Nop.Core</strong> and <strong>Nop.Data</strong>will be connected automatically</p>
-<h2 id="the-data-access-layer-aka-creating-new-entities-in-nopcommerce">The Data Access Layer (A.K.A. Creating new entities in nopCommerce)</h2>
+<h2 id="the-data-access-layer-aka-creating-new-entities-in-nopcommerce">The Data Access Layer (A.K.A. Creating new entities in NitroSmart)</h2>
 <p>Inside of the &quot;<em>domain</em>&quot; namespace we're going to create a public class named <strong><code>ProductViewTrackerRecord</code></strong>. This class extends <strong><code>BaseEntity</code></strong>, but it is otherwise a very simple file. Something to remember is that we do not have navigation properties (relational properties), because the <em>Linq2DB</em> framework, which we use to work with databases does not support the navigation properties.</p>
 <pre><code class="lang-csharp">namespace Nop.Plugin.Misc.ProductViewTracker.Domain
 {
@@ -176,7 +176,7 @@ namespace Nop.Plugin.Other.ProductViewTracker.Migrations
 }
 </code></pre>
 <h2 id="service-layer">Service layer</h2>
-<p>The service layer connects the data access layer and the presentation layer. Since it is bad form to share any type of responsibility in code each layer needs to be isolated. The service layer wraps the data layer with business logic and the presentation layer depends on the service layer. Because our task is very small our service layer does nothing but communicate with the repository (the repository in nopCommerce acts as a facade to the object context).</p>
+<p>The service layer connects the data access layer and the presentation layer. Since it is bad form to share any type of responsibility in code each layer needs to be isolated. The service layer wraps the data layer with business logic and the presentation layer depends on the service layer. Because our task is very small our service layer does nothing but communicate with the repository (the repository in NitroSmart acts as a facade to the object context).</p>
 <pre><code class="lang-csharp">using Nop.Data;
 using Nop.Plugin.Other.ProductViewTracker.Domains;
 using System;
@@ -362,7 +362,7 @@ namespace Nop.Plugin.Other.ProductViewTracker
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

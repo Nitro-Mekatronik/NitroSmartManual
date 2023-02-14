@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>A guide to expand the basic functionality of nopCommerce through a plugin </title>
+    <title>A guide to expand the basic functionality of NitroSmart through a plugin </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="A guide to expand the basic functionality of nopCommerce through a plugin ">
+    <meta name="title" content="A guide to expand the basic functionality of NitroSmart through a plugin ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -92,12 +92,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="en/developer/tutorials/guide-to-expanding-the-functionality-of-the-basic-functions-of-nop-commerce-through-a-plugin">
-<h1 id="a-guide-to-expanding-the-basic-functionality-of-nopcommerce-through-a-plugin">A guide to expanding the basic functionality of nopCommerce through a plugin</h1>
+<h1 id="a-guide-to-expanding-the-basic-functionality-of-nopcommerce-through-a-plugin">A guide to expanding the basic functionality of NitroSmart through a plugin</h1>
 
 <h2 id="overview">Overview</h2>
-<p>nopCommerce uses the plugins system to extend the functionality of the nopCommerce admin panel and uses a widget system to extend the functionality of the website. Plugins and Widgets are a set of independent programs or components that can be added to an existing system to extend some specific functionality and also can be removed from the system without affecting the main system during the process. So by using the concept of Plugins and widgets we can add more functionality to our system and we can build them without altering or editing the core source code of the nopCommerce solution. This enables us to upgrade or downgrade our nopCommerce solution to the latest version or older version as we desire without having to rewrite plugins and widgets we already created.</p>
+<p>NitroSmart uses the plugins system to extend the functionality of the NitroSmart admin panel and uses a widget system to extend the functionality of the website. Plugins and Widgets are a set of independent programs or components that can be added to an existing system to extend some specific functionality and also can be removed from the system without affecting the main system during the process. So by using the concept of Plugins and widgets we can add more functionality to our system and we can build them without altering or editing the core source code of the NitroSmart solution. This enables us to upgrade or downgrade our NitroSmart solution to the latest version or older version as we desire without having to rewrite plugins and widgets we already created.</p>
 <h2 id="difference-between-plugin-and-widget">Difference between Plugin and Widget</h2>
-<p>As we know both plugins and widgets are for extending the functionality of the nopCommerce solution. Well, then you may ask &quot;what is the difference between them&quot;. Ultimately in nopCommerce, you can think of widgets as a plugin but with an extra feature. To create a widget the process is mostly the same as creating a plugin, but by using widgets we can show some UI (User Interface) to nopCommerce public website in some specific areas predefined by nopCommerce which is known as widget-zones. Which we cannot achieve only via a plugin. You may think of Widget as a Superset of Plugin.</p>
+<p>As we know both plugins and widgets are for extending the functionality of the NitroSmart solution. Well, then you may ask &quot;what is the difference between them&quot;. Ultimately in NitroSmart, you can think of widgets as a plugin but with an extra feature. To create a widget the process is mostly the same as creating a plugin, but by using widgets we can show some UI (User Interface) to NitroSmart public website in some specific areas predefined by NitroSmart which is known as widget-zones. Which we cannot achieve only via a plugin. You may think of Widget as a Superset of Plugin.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>All available widget zones can be found in the <code>Nop.Web.Framework.Infrastructure</code> namespace:</p>
@@ -108,16 +108,16 @@
 </li>
 </ul>
 </div>
-<p>I think you are a bit more clear about what widgets and plugins are when they can be used and what is the benefits of using them. So, now let's go and create a simple widget that shows a &quot;Hello World&quot; message to the public site, to understand how to create a widget in nopCommerce.</p>
+<p>I think you are a bit more clear about what widgets and plugins are when they can be used and what is the benefits of using them. So, now let's go and create a simple widget that shows a &quot;Hello World&quot; message to the public site, to understand how to create a widget in NitroSmart.</p>
 <h2 id="initialize-plugin-project">Initialize Plugin Project</h2>
 <h3 id="step-1-create-a-new-project">Step 1: Create a new project</h3>
-<p>Go to the nopCommerce official website and download the latest nopCommerce source code. Open your nopCommerce solution in your favorite IDE (Microsoft Visual Studio is recommended). If you want to know more about the structure of the project, then first check out the article <a class="xref" href="source-code-organization.html">&quot;Source code organization&quot;</a>. On the roof of the solution, you will see a <em>Plugins</em> folder, expand that folder and you will see a list of plugin projects shipped with nopCommerce by default.</p>
+<p>Go to the NitroSmart official website and download the latest NitroSmart source code. Open your NitroSmart solution in your favorite IDE (Microsoft Visual Studio is recommended). If you want to know more about the structure of the project, then first check out the article <a class="xref" href="source-code-organization.html">&quot;Source code organization&quot;</a>. On the roof of the solution, you will see a <em>Plugins</em> folder, expand that folder and you will see a list of plugin projects shipped with NitroSmart by default.</p>
 <p><img src="static/guide-to-expanding-the-functionality-of-the-basic-functions-of-nop-commerce-through-a-plugin/image1.png" alt="image1"></p>
 <p>In order to create new Widget project, Right-click on <em>Plugins</em> folder: <strong>Add</strong> -&gt; <strong>New Project</strong>. After that add new project window will appear.</p>
 <p><img src="static/guide-to-expanding-the-functionality-of-the-basic-functions-of-nop-commerce-through-a-plugin/image2.png" alt="image2"></p>
 <p>Select the <strong>Class Library</strong> project template and go to the next step, where you will need to specify the name of the project.</p>
 <p><img src="static/guide-to-expanding-the-functionality-of-the-basic-functions-of-nop-commerce-through-a-plugin/image2_1.png" alt="image2_1"></p>
-<p>nopCommerce follows some standard naming conversion, which you can get more information from nopCommerce documentation. I have chosen <code>Nop.Plugin.Widget.HelloWorld</code> as my project name by following the naming conversion of nopCommerce. And the location should be inside the <em>/src/Plugins</em> directory. Now click <strong>Next</strong>.</p>
+<p>NitroSmart follows some standard naming conversion, which you can get more information from NitroSmart documentation. I have chosen <code>Nop.Plugin.Widget.HelloWorld</code> as my project name by following the naming conversion of NitroSmart. And the location should be inside the <em>/src/Plugins</em> directory. Now click <strong>Next</strong>.</p>
 <p><img src="static/guide-to-expanding-the-functionality-of-the-basic-functions-of-nop-commerce-through-a-plugin/image2_2.png" alt="image2_2"></p>
 <p>This should create a new project inside the Plugin directory. And you may see in your solution like this:</p>
 <p><img src="static/guide-to-expanding-the-functionality-of-the-basic-functions-of-nop-commerce-through-a-plugin/image3.png" alt="image3"></p>
@@ -151,11 +151,11 @@
 &lt;/Project&gt;
 </code></pre>
 <p>Here replace <code>{Plugin_Output_Directory}</code> with your project name, in my case <em>Widget.HelloWorld</em>.</p>
-<p>What this will do is it copies all DLL files related to this project into the <code>Nop.Web/Plugin/{Plugin_Output_Directory}</code>, because <em>Plugin</em> directory inside <code>Nop.Web</code> is the location where nopCommerce searches from plugins and widgets to display in <em>Plugin</em> or <em>Widget</em> list in the admin panel.</p>
+<p>What this will do is it copies all DLL files related to this project into the <code>Nop.Web/Plugin/{Plugin_Output_Directory}</code>, because <em>Plugin</em> directory inside <code>Nop.Web</code> is the location where NitroSmart searches from plugins and widgets to display in <em>Plugin</em> or <em>Widget</em> list in the admin panel.</p>
 <h3 id="step-3-create-a-pluginjson-file">Step 3: Create a plugin.json file</h3>
-<p>This file is required for every <em>Plugin</em> or <em>Widget</em> we create in nopCommerce. This file contains meta-information about our plugin that describes our plugin. It contains information like the Name of our plugin, which version of nopCommerce it is target/built for, some description about our plugin, version of our plugin, and so on. For information please see the article <a class="xref" href="../plugins/plugin.json.html">plugin.json file</a>.</p>
+<p>This file is required for every <em>Plugin</em> or <em>Widget</em> we create in NitroSmart. This file contains meta-information about our plugin that describes our plugin. It contains information like the Name of our plugin, which version of NitroSmart it is target/built for, some description about our plugin, version of our plugin, and so on. For information please see the article <a class="xref" href="../plugins/plugin.json.html">plugin.json file</a>.</p>
 <h3 id="step-4-create-a-class-that-extends-from-baseplugin-class">Step 4: Create a class that extends from BasePlugin Class</h3>
-<p>We need to have a class that is inherent from the <code>IPlugin</code> interface so that nopCommerce treats our project as a plugin. But nopCommerce already has a class <code>BasePlugin</code> that inherits from the <code>IPlugin</code> interface and implements all methods from that interface. So, instead of inheriting from the <code>IPlugin</code> interface, we can extend from the <code>BasePlugin</code> class. If we have some logic that needs to be executed during our plugin/widget installation and uninstallation process then we can override the <code>InstallAsync</code> and <code>UninstallAsync</code> methods from the <code>BasePlugin</code> class to our class. Finally, the class should look like this</p>
+<p>We need to have a class that is inherent from the <code>IPlugin</code> interface so that NitroSmart treats our project as a plugin. But NitroSmart already has a class <code>BasePlugin</code> that inherits from the <code>IPlugin</code> interface and implements all methods from that interface. So, instead of inheriting from the <code>IPlugin</code> interface, we can extend from the <code>BasePlugin</code> class. If we have some logic that needs to be executed during our plugin/widget installation and uninstallation process then we can override the <code>InstallAsync</code> and <code>UninstallAsync</code> methods from the <code>BasePlugin</code> class to our class. Finally, the class should look like this</p>
 <pre><code class="lang-cs">public class HelloWorldPlugin: BasePlugin
 {
     public override async Task InstallAsync()
@@ -244,7 +244,7 @@
                       <a target="_blank" href="https://www.nopcommerce.com/training?utm_source=docs_nopcommerce&utm_medium=documentation&utm_campaign=course&utm_content=Developers_Guide">
                           <div class="course-banner-left"></div>
                           <div class="course-banner-center">
-                              <div class="course-banner-title"><span>nopCommerce training course</span></div>
+                              <div class="course-banner-title"><span>NitroSmart training course</span></div>
                               <div class="course-banner-description"><span>Start developing your skills and become a Certified Developer</span></div>
                           </div>
                           <div class="course-banner-right"></div>

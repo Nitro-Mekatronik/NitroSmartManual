@@ -127,7 +127,7 @@
 
 sudo dpkg -i packages-microsoft-prod.deb
 </code></pre>
-<p><img src="_static/installing-on-linux/register_key.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/register_key.jpg" alt="nopCommerce installation"></p>
 <h3 id="install-the-net-core-runtime">Install the .NET Core Runtime</h3>
 <p>Update the products available for installation, then install the .NET runtime:</p>
 <pre><code class="lang-cmd">sudo apt-get update
@@ -145,11 +145,11 @@ sudo apt-get install -y apt-transport-https aspnetcore-runtime-7.0
 <p>Install the MySql server 8.0 version:</p>
 <pre><code class="lang-cmd">sudo apt-get install mysql-server
 </code></pre>
-<p><img src="_static/installing-on-linux/install_mysql.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/install_mysql.jpg" alt="nopCommerce installation"></p>
 <p>By default, the root password is empty; let's set it:</p>
 <pre><code class="lang-cmd">sudo /usr/bin/mysql_secure_installation
 </code></pre>
-<p><img src="_static/installing-on-linux/config_mysql.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/config_mysql.jpg" alt="nopCommerce installation"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you have a problem with configuring root password on your MySql server, please read the following articles:
@@ -160,14 +160,14 @@ sudo apt-get install -y apt-transport-https aspnetcore-runtime-7.0
 <p>Install the nginx package:</p>
 <pre><code class="lang-cmd">sudo apt-get install nginx
 </code></pre>
-<p><img src="_static/installing-on-linux/Install_nginx.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/Install_nginx.jpg" alt="nopCommerce installation"></p>
 <p>Run the nginx service:</p>
 <pre><code class="lang-cmd">sudo systemctl start nginx
 </code></pre>
 <p>and check its status:</p>
 <pre><code class="lang-cmd">sudo systemctl status nginx
 </code></pre>
-<p><img src="_static/installing-on-linux/status_nginx.jpg" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/status_nginx.jpg" alt="nopCommerce installation"></p>
 <p>To configure nginx as a reverse proxy to forward requests to your ASP.NET Core app, modify /etc/nginx/sites-available/default. Open it in a text editor and replace the contents with the following:</p>
 <pre><code class="lang-cmd"># Default server configuration
 #
@@ -253,7 +253,7 @@ WantedBy=multi-user.target
 <p>Check the nopCommerce service status:</p>
 <pre><code class="lang-cmd">sudo systemctl status nopCommerce.service
 </code></pre>
-<p><img src="_static/installing-on-linux/status_nopCommerce.png" alt="nopCommerce installation"></p>
+<p><img src="static/installing-on-linux/status_nopCommerce.png" alt="nopCommerce installation"></p>
 <p>Restart the nginx server:</p>
 <pre><code class="lang-cmd">sudo systemctl restart nginx
 </code></pre>

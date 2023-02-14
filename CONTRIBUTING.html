@@ -103,7 +103,7 @@
 <p>Structuring rules:</p>
 <ul>
 <li><p>All resources related to an article (such as images, videos) should be stored in a separate folder. For example:</p>
-<pre><code class="lang-sh">_static/[topic_file_name]/[Resource_name].png
+<pre><code class="lang-sh">static/[topic_file_name]/[Resource_name].png
 </code></pre>
 <p>where <code>[topic_file_name].md</code> is flush with the _static folder</p>
 </li>
@@ -111,7 +111,7 @@
 </li>
 </ul>
 <p>So, an image in the <code>en/developer/tutorials/source-code-organization.md</code> file is rendered by the following Markdown:</p>
-<pre><code class="lang-md">![description of image for alt attribute](en/developer/tutorials/_static/source-code-organization/imagename.png)
+<pre><code class="lang-md">![description of image for alt attribute](en/developer/tutorials/static/source-code-organization/imagename.png)
 </code></pre>
 <p>All images should have <a href="https://wikipedia.org/wiki/Alt_attribute">alternative (alt) text</a>. For advice on specifying alt text, see online resources, such as <a href="https://webaim.org/techniques/alttext/">WebAIM: Alternative Text</a>.</p>
 <p>Use lowercase for Markdown file names and image file names.</p>

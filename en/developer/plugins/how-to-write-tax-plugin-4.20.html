@@ -98,13 +98,13 @@
 <h2 id="the-plugin-structure-required-files-and-locations">The plugin structure, required files, and locations</h2>
 <ol>
 <li><p>Start by creating a new &quot;Class Library&quot; project in the solution. It is recommended to place your plugin in the <strong>Plugins</strong> directory, located in the root folder of the source, where other plugins and widgets already reside.</p>
-<p><img src="_static/how-to-write-a-tax-plugin-4.20/image1.png" alt="image1"></p>
+<p><img src="static/how-to-write-a-tax-plugin-4.20/image1.png" alt="image1"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Do not get confused this directory with the one which exists in the <code>Presentation\Nop.Web</code> directory. The Plugins directory in the Nop.Web directory contains the plugin's compiled files.</p>
 </div>
 <p>A recommended name for a plugin project is <code>Nop.Plugin.{Group}.{Name}</code>. <code>{Group}</code> is your plugin group (for example, <code>Payment</code> or <code>Shipping</code>). <code>{Name}</code> is your plugin name (for example, <code>FixedOrByCountryStateZip</code>). For example, <code>FixedOrByCountryStateZip</code> tax plugin has the following name: <code>Nop.Plugin.Tax.FixedOrByCountryStateZip</code>. But please note that it's not a requirement. And you can choose any name for a plugin. For example, <code>MyFirstTaxPlugin</code>. The Plugins directory structure of a solution looks like the following.</p>
-<p><img src="_static/how-to-write-a-tax-plugin-4.20/image2.png" alt="image2"></p>
+<p><img src="static/how-to-write-a-tax-plugin-4.20/image2.png" alt="image2"></p>
 </li>
 <li><p>Once the plugin project is created, the <strong>.csproj</strong> file content should be updated using any available text editor application. Replace the content with the following one:</p>
 <pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
@@ -145,9 +145,9 @@
 </ol>
 <h2 id="handling-requests-controllers-models-and-views">Handling requests. Controllers, models, and views</h2>
 <p>Now you can see the plugin by going to <strong>Admin area</strong> → <strong>Configuration</strong> → <strong>Local Plugins</strong>.</p>
-<p><img src="_static/how-to-write-a-tax-plugin-4.20/image4.png" alt="image4"></p>
+<p><img src="static/how-to-write-a-tax-plugin-4.20/image4.png" alt="image4"></p>
 <p>When a plugin/widget is installed, you will see the <strong>Uninstall</strong> button. It is a good practice that you uninstall plugins/widgets which are not necessary for performance improvement.</p>
-<p><img src="_static/how-to-write-a-tax-plugin-4.20/image5.png" alt="image5"></p>
+<p><img src="static/how-to-write-a-tax-plugin-4.20/image5.png" alt="image5"></p>
 <p>There will be the <strong>Install</strong> and <strong>Delete</strong> buttons when a plugin/widget is not installed or uninstalled.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -223,7 +223,7 @@
 <ul>
 <li>Also make sure that you have <strong>_ViewImports.cshtml</strong> file into your <code>Views</code> directory. You can just copy it from any other existing plugin or widget.</li>
 </ul>
-<p><img src="_static/how-to-write-a-tax-plugin-4.20/image6.png" alt="image6"></p>
+<p><img src="static/how-to-write-a-tax-plugin-4.20/image6.png" alt="image6"></p>
 <ul>
 <li><strong>Create the controller</strong>. Add a <code>Controllers</code> folder in the new plugin, and then add a new controller class. A good practice is to name plugin controllers <strong>{Group}{Name}Controller.cs</strong>. For example, <code>FixedOrByCountryStateZipController</code>. Of course, it's not a requirement to name controllers this way (but just a recommendation). Then create an appropriate action method for the configuration page (in the admin area). Let's name it <code>Configure</code>. Prepare a model class and pass it to the following view using a physical view path: <strong>~/Plugins/{PluginOutputDirectory}/Views/Configure.cshtml</strong>.</li>
 </ul>
@@ -278,7 +278,7 @@ Then for each plugin that has a configuration page, you should specify a configu
 </code></pre>
 <p>Where <em>{CONTROLLER_NAME}</em> is the name of your controller and <em>{ACTION_NAME}</em> is the name of the action (usually it's <code>Configure</code>).</p>
 <p>For assigning different tax rates according to the customer address, a new table is required which records all data related to tax. For this purpose, the <code>Domain</code> folder is added where we add a class that extends the <strong>BaseEntity</strong> class. In this case <code>TaxRate.cs</code></p>
-<p><img src="_static/how-to-write-a-tax-plugin-4.20/image7.png" alt="image7"></p>
+<p><img src="static/how-to-write-a-tax-plugin-4.20/image7.png" alt="image7"></p>
 <p>Another folder <code>Data</code> is also added which consists of Map class(es) and Object Context class(es). Mapping class implements <strong><code>NopEntityTypeConfiguration&lt;T&gt;</code></strong> (<code>Nop.Data.Mapping</code> namespace). Here, the configure method is overridden.</p>
 <pre><code class="lang-cs">public override void Configure(EntityTypeBuilder&lt;TaxRate&gt; builder)
 {
@@ -616,7 +616,7 @@ Then for each plugin that has a configuration page, you should specify a configu
 }
 </code></pre>
 <h2 id="project-structure-of-tax-plugin">Project structure of Tax Plugin</h2>
-<p><img src="_static/how-to-write-a-tax-plugin-4.20/image8.png" alt="image8"></p>
+<p><img src="static/how-to-write-a-tax-plugin-4.20/image8.png" alt="image8"></p>
 <h2 id="handling-install-and-uninstall-methods">Handling &quot;Install&quot; and &quot;Uninstall&quot; methods</h2>
 <p>This step is optional. Some plugins can require additional logic during their installation. For example, a plugin can insert new locale resources or add necessary tables or settings values. So open your <code>BasePlugin</code> implementation and override the following methods:</p>
 <ul>

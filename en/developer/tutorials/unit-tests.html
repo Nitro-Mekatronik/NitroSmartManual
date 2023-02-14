@@ -102,11 +102,11 @@
 </ul>
 <p>In this article, we will get acquainted with the features of testing in the nopCommerce project and learn how to add new tests and check their performance. We won't test an abstract task but will write a full-fledged test for the existing functionality from scratch. At the end of the article, you will be provided with a reference to the appropriate commit with all described code changes.</p>
 <h2 id="features-overview">Features overview</h2>
-<p><img src="_static/unit-tests/tests-project.jpg" alt="tests-project"></p>
+<p><img src="static/unit-tests/tests-project.jpg" alt="tests-project"></p>
 <p>On the screenshot, you can see the structure of the Nop.Tests project. The folders such as <code>Nop.Core.Tests</code> contain tests for the corresponding projects of the solution. The other files are responsible for the auxiliary and base classes. Let's look at the <code>BaseNopTest</code> class.</p>
 <h3 id="basenoptest">BaseNopTest</h3>
 <p>This is the main abstract class that exposes the IoC container for tests and allows us to use all the advantages of DI.</p>
-<p><img src="_static/unit-tests/base-nop-test.jpg" alt="base-nop-test"></p>
+<p><img src="static/unit-tests/base-nop-test.jpg" alt="base-nop-test"></p>
 <p>This class contains two methods available for child classes:</p>
 <ul>
 <li><p><code>PropertiesShouldEqual</code> that compares all fields of the database entity with the fields of the model.</p>

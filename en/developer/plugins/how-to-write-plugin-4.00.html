@@ -102,7 +102,7 @@
 <ol>
 <li><p>First thing you need to do is to create a new &quot;Class Library&quot; project in the solution. It's a good practice to place all plugins into the <code>\Plugins</code> directory in the root of your solution (do not mix up with \Plugins subdirectory located in <code>\Nop.Web</code> directory which is used for already deployed plugins). It's a good practice to place all plugins into the &quot;Plugins&quot; solution folder (you can find more information about solution folders <a href="http://msdn.microsoft.com/library/sx2027y2.aspx">here</a>).</p>
 <p>A recommended name for a plugin project is &quot;Nop.Plugin.{Group}.{Name}&quot;. {Group} is your plugin group (for example, &quot;Payment&quot; or &quot;Shipping&quot;). {Name} is your plugin name (for example, &quot;PayPalStandard&quot;). For example, the PayPal Standard payment plugin has the following name: Nop.Plugin.Payments.PayPalStandard. But please note that it's not a requirement. And you can choose any name for a plugin. For example, &quot;MyGreatPlugin&quot;.</p>
-<p><img src="_static/how-to-write-plugin-4.00/write_plugin_4.00_1.jpg" alt="p1"></p>
+<p><img src="static/how-to-write-plugin-4.00/write_plugin_4.00_1.jpg" alt="p1"></p>
 </li>
 <li><p>Once the plugin project is created you have to open its <code>.csproj</code> file in any text editor and replace its content with the following one:</p>
 <pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
@@ -181,7 +181,7 @@
 <p>The easiest way to complete the steps described above is by opening any other plugin and copying these files into your plugin project. Then just rename appropriate classes and directories.</p>
 </div>
 <p>For example, the project structure of the PayPalStandard plugin looks like the image below:</p>
-<p><img src="_static/how-to-write-plugin-4.00/write_plugin_4.00_3.jpg" alt="p3"></p>
+<p><img src="static/how-to-write-plugin-4.00/write_plugin_4.00_3.jpg" alt="p3"></p>
 <h2 id="handling-install-and-uninstall-methods">Handling &quot;Install&quot; and &quot;Uninstall&quot; methods</h2>
 <p>This step is optional. Some plugins can require additional logic during plugin installation. For example, a plugin can insert new locale resources. So open your IPlugin implementation (in most cases it'll be derived from BasePlugin class) and override the following methods:</p>
 <ul>

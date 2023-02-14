@@ -113,7 +113,7 @@
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>After installing the backend and frontend APIs, switching between them is implemented directly through the Swagger UI page in the dropdown list of available definitions.
-<img src="_static/index/SwaggerUI_1.png" alt="image"></p>
+<img src="static/index/SwaggerUI_1.png" alt="image"></p>
 </div>
 <h4 id="scopes-and-permissions">Scopes and permissions</h4>
 <p>To use the API, the client application should have appropriate permissions (ACL) in a nopCommerce store where the API plugin is installed. For example, to access backend (admin panel) methods through the API, a special &quot;Access Web API Backend&quot; permission is required. By default, this permission is provided for the administrator role only. You can change these settings through the standard ACL used in nopCommerce.</p>
@@ -189,7 +189,7 @@ You can test the APIs using the following tools:</p>
 <li>Click the &quot;Send&quot; button. You should receive a &quot;200 OK&quot; response with the user details including a JWT token in the response body. Copy the token value because we'll be using it in the next step to make an authenticated request.</li>
 </ol>
 <p>Here's a screenshot of Postman after the request is sent and the user has been authenticated:</p>
-<p><img src="_static/index/Postman_1.png" alt="image"></p>
+<p><img src="static/index/Postman_1.png" alt="image"></p>
 <h3 id="how-to-make-an-authenticated-request-to-retrieve-a-topic-by-id">How to make an authenticated request to retrieve a topic by ID</h3>
 <p>To make an authenticated request using the JWT token from the previous step, follow these steps:</p>
 <ol>
@@ -197,10 +197,10 @@ You can test the APIs using the following tools:</p>
 <li>Change the HTTP request method to &quot;GET&quot; using the dropdown selector on the left of the URL input field.</li>
 <li>In the URL field, enter the “Get topic” URL of your API: <code>{storeURL}/api-backend/Topic/GetById/:id</code>.</li>
 <li>Select the &quot;Authorization&quot; tab below the URL field, change the type to &quot;Bearer Token&quot; in the type dropdown selector, and paste the JWT token from the previous authentication step into the &quot;Token&quot; field.
-<img src="_static/index/Postman_2.png" alt="image"></li>
+<img src="static/index/Postman_2.png" alt="image"></li>
 <li>Click the &quot;Send&quot; button. You should receive a &quot;200 OK&quot; response containing a JSON array with all the user records in the system (just the one test user in the example).
 Here's a screenshot of Postman after making an authenticated request to get a topic by id:
-<img src="_static/index/Postman_3.png" alt="image"></li>
+<img src="static/index/Postman_3.png" alt="image"></li>
 </ol>
 <h2 id="license">License</h2>
 <p>The Web API plugin is licensed under the <a href="https://www.nopcommerce.com/web-api-license-terms">following terms</a>.</p>

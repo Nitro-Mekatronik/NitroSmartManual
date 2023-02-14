@@ -121,7 +121,7 @@
 <h5>Note</h5>
 <p>FIRSTNAME and LASTNAME should be existing attributes in your Sendinblue account.</p>
 </div>
-<p><img src="_static/recover-abandoned-carts/attribute-personalization.gif" alt="Attribute personalization"></p>
+<p><img src="static/recover-abandoned-carts/attribute-personalization.gif" alt="Attribute personalization"></p>
 <p>Now let's personalize the email template with order variables such as the name of the items left behind, their images, price etc. To do so, we will use the <em>New Template Language</em> to insert a dynamic list.</p>
 <h3 id="personalize-your-email-with-the-abandoned-items-details">Personalize your email with the abandoned items details</h3>
 <p>The following variables may be included directly from a dynamic list within your Sendinblue template content:</p>
@@ -183,7 +183,7 @@
 <li>In the <strong>variable</strong> field, write <code>item</code>.</li>
 <li>Set the limit for the number of items that will be displayed. For example, if there are 5 items left in the cart, and you set 3 as the limit, only 3 items will be shown in the email.</li>
 </ol>
-<p><img src="_static/recover-abandoned-carts/items.jpg" alt="Email editor"></p>
+<p><img src="static/recover-abandoned-carts/items.jpg" alt="Email editor"></p>
 <p>Now add the variables to your email template. In the example above, we have added:</p>
 <ul>
 <li><code>{{ item.name }}</code> - the name of the item</li>
@@ -191,9 +191,9 @@
 <li><code>{{ item.price | floatformat: 2 }}</code> - the price of the item</li>
 </ul>
 <p>To add the link of the item, select the <strong>Call-To-Action (CTA)</strong> button. On the right sidebar, under <em>Link</em>, type <code>{{ item.url }}</code>.</p>
-<p><img src="_static/recover-abandoned-carts/item-url.jpg" alt="item.url"></p>
+<p><img src="static/recover-abandoned-carts/item-url.jpg" alt="item.url"></p>
 <p>To add the image of the item, select the image. On the right sidebar, under <em>Image source</em>, choose <em>From URL</em> then type <code>{{ item.image }}</code>.</p>
-<p><img src="_static/recover-abandoned-carts/item-image.jpg" alt="item.image"></p>
+<p><img src="static/recover-abandoned-carts/item-image.jpg" alt="item.image"></p>
 <p>Once your design is complete, click the green <strong>Save &amp; Quit</strong> button. Then click the <strong>Save &amp; Activate</strong> button.</p>
 <h3 id="personalize-your-email-with-the-abandoned-cart-details">Personalize your email with the abandoned cart details</h3>
 <p>The following variables may be included directly within your Sendinblue template content:</p>
@@ -255,9 +255,9 @@
 <li><code>{{ params.discount | floatformat: 2 }}</code> - the discount of the abandoned cart</li>
 <li><code>{{ params.total | floatformat: 2 }}</code> - the total of the abandoned cart</li>
 </ul>
-<p><img src="_static/recover-abandoned-carts/cart.jpg" alt="Cart"></p>
+<p><img src="static/recover-abandoned-carts/cart.jpg" alt="Cart"></p>
 <p>To add the link of the abandoned cart, select the <strong>Call-To-Action (CTA)</strong> button. On the right sidebar, under <em>Link</em>, type <code>{{ params.url }}</code>.</p>
-<p><img src="_static/recover-abandoned-carts/url.jpg" alt="params.url"></p>
+<p><img src="static/recover-abandoned-carts/url.jpg" alt="params.url"></p>
 <p>Once your design is complete, click the green <strong>Save &amp; Quit</strong> button. Then click the <strong>Save &amp; Activate</strong> button.</p>
 <h2 id="creating-the-abandoned-cart-workflow">Creating the abandoned cart workflow</h2>
 <div class="NOTE">
@@ -266,7 +266,7 @@
 </div>
 <p>Navigate to the <a href="https://automation.sendinblue.com/?tap_a=30591-fb13f0&amp;tap_s=840216-5153c7">Automation</a> tab of your Sendinblue account.</p>
 <p>Click on <strong>+ CREATE A NEW WORKFLOW</strong>, then select <strong>Detailed Abandoned Cart</strong> and follow the steps.</p>
-<p><img src="_static/recover-abandoned-carts/detailed-abandoned-cart.jpg" alt="Detailed Abandoned Cart"></p>
+<p><img src="static/recover-abandoned-carts/detailed-abandoned-cart.jpg" alt="Detailed Abandoned Cart"></p>
 <p>At the <em>Send an email</em> step, select the email template you have just created and activated from the dropdown list.</p>
 <p>When your workflow is complete, click on <strong>DONE</strong> to save and activate it.</p>
 <p>Feel free to read this tutorials to help you creating the workflow:</p>
@@ -275,11 +275,11 @@
 </ul>
 <h2 id="example">Example</h2>
 <p>Let's say that customer Jean Blue jean.blue@sendinblue.com has visited your store but the following 3 items have been left in the cart.</p>
-<p><img src="_static/recover-abandoned-carts/cart-example.jpg" alt="Cart example"></p>
+<p><img src="static/recover-abandoned-carts/cart-example.jpg" alt="Cart example"></p>
 <p>Your template will look like this:</p>
-<p><img src="_static/recover-abandoned-carts/template.jpg" alt="Cart example"></p>
+<p><img src="static/recover-abandoned-carts/template.jpg" alt="Cart example"></p>
 <p>The email received by Jean Blue will look like this:</p>
-<p><img src="_static/recover-abandoned-carts/email.jpg" alt="Cart example"></p>
+<p><img src="static/recover-abandoned-carts/email.jpg" alt="Cart example"></p>
 <h2 id="learn-more">Learn more</h2>
 <ul>
 <li><a class="xref" href="send-an-order-confirmation-email.html">Send an order confirmation email</a></li>

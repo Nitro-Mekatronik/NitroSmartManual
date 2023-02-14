@@ -96,15 +96,15 @@
 
 <p>nopCommerce supports importing from Excel format and exporting products in XML or Excel. You can download products from your catalog in PDF.
 You can find these options in <strong>Catalog → Products</strong> on the main page, top left.</p>
-<p><img src="_static/import-export-products/buttons.jpg" alt="Products"></p>
+<p><img src="static/import-export-products/buttons.jpg" alt="Products"></p>
 <h2 id="exporting-products">Exporting products</h2>
 <p>You can export products in XML or Excel formats by clicking the <strong>Export</strong> button. After clicking the <strong>Export</strong> button, you will see the dropdown menu enabling you to <strong>Export to XML (all found)</strong> or <strong>Export to XML (selected)</strong> and <strong>Export to Excel (all found)</strong> or <strong>Export to Excel (selected)</strong>.</p>
-<p><img src="_static/import-export-products/exporting_product.png" alt="Exporting product"></p>
+<p><img src="static/import-export-products/exporting_product.png" alt="Exporting product"></p>
 <p>If you don't need to download all the products, use the <em>Search</em> panel to find the required products or/and checkboxes to select the needed products. A file with the products you have chosen will be downloaded. The file will consist of all the products' characteristics from product editing page panels (Product info, SEO, Pictures, and more).</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you use product attributes, an exported Excel table will be grouped by rows. To view attribute details, click + next to your product in the table.
-<img src="_static/import-export-products/simple_product.png" alt="Simple product"></p>
+<img src="static/import-export-products/simple_product.png" alt="Simple product"></p>
 </div>
 <h2 id="importing-products">Importing products</h2>
 <p>If you do not want to add all the products to your catalog manually, you can use the import option.</p>
@@ -117,9 +117,9 @@ You can find these options in <strong>Catalog → Products</strong> on the main 
 <p>Import requires a lot of memory resources. That's why it's not recommended to import more than 500–1000 records at once. If you have more records, it's better to split them into multiple Excel files and import them separately.</p>
 <h3 id="example">Example</h3>
 <p>For example, we want to add Dancing shoes to our catalog. Let's create a new row in the table:</p>
-<p><img src="_static/import-export-products/product_table.png" alt="product table"></p>
+<p><img src="static/import-export-products/product_table.png" alt="product table"></p>
 <p>Then click <strong>Import</strong>, choose the file, and click the <strong>Import from Excel</strong> button. Then check if you have a new product in the catalog.</p>
-<p><img src="_static/import-export-products/product_catalog.png" alt="product catalog"></p>
+<p><img src="static/import-export-products/product_catalog.png" alt="product catalog"></p>
 <h2 id="importing-products-with-images-hosted-on-external-resources">Importing products with images hosted on external resources</h2>
 <p>Sometimes it is necessary to import products with images that are hosted on external resources. nopCommerce supports such a scenario. However, this option is disabled by default for security purposes. You can enable it on the <strong>&quot;Catalog settings&quot;</strong> page in the administration area. Just enable the <strong>&quot;Export/import products. Allow download images&quot;</strong> setting.</p>
 <p>There is an address validation code provided by the .NET platform in this image loading method. This mechanism doesn't always correctly determine the correctness of addresses despite their full compliance with the <a href="https://datatracker.ietf.org/doc/html/rfc3986">RFC3986</a> specification. Our recommendation is to avoid using special characters, such as <strong>^</strong> or <strong>~</strong>, in URLs. So please ensure that all specified URLs contain Latin chars only.</p>

@@ -117,7 +117,7 @@
 </ul>
 <h2 id="setup">Setup</h2>
 <p>With the &quot;nopCommerce mobile app&quot; plugin, in addition to the &quot;Web API Frontend&quot; plugin, it is possible to manage some application settings.</p>
-<p><img src="_static/index/app_plugin.png" alt="image"></p>
+<p><img src="static/index/app_plugin.png" alt="image"></p>
 <p>The following functions are available:</p>
 <ol>
 <li>It is possible to transfer certain settings to the mobile application. This is done on purpose so as not to give access to absolutely all application settings. If you need additional settings, you must ensure that they are supported in the mobile application.</li>
@@ -180,9 +180,9 @@ VS Marketplace Link: <a href="https://marketplace.visualstudio.com/items?itemNam
 </code></pre>
 <h2 id="project-structure">Project structure</h2>
 <p>A mobile application developed on Flutter carries the functions of interacting with a public store using the Web API (Frontend). All the main processes of user interaction with the application are presented in the diagram below:</p>
-<p><img src="_static/index/app_flow.png" alt="image"></p>
+<p><img src="static/index/app_flow.png" alt="image"></p>
 <p>The approach that focuses on the fact that the functions of the application are root folders will be applied. And inside this folder, we describe the architectural layers inherent in this particular function in the form of subfolders. Thus, everything related to the functionality of interest to us is located in one folder, which greatly simplifies the understanding of the code.</p>
-<p><img src="_static/index/app_structure.png" alt="image"></p>
+<p><img src="static/index/app_structure.png" alt="image"></p>
 <h2 id="technology-stack">Technology stack</h2>
 <p>Frameworks &amp; Libraries used:</p>
 <ul>
@@ -195,7 +195,7 @@ VS Marketplace Link: <a href="https://marketplace.visualstudio.com/items?itemNam
 </ul>
 <h2 id="app-architecture">App architecture</h2>
 <p>The application architecture is built according to generally accepted standards, described in the <a href="https://developer.android.com/topic/architecture">Android documentation</a>. Since the project uses the Riverpod state management system, the architecture has been extended and looks like this:</p>
-<p><img src="_static/index/app_arch.png" alt="image"></p>
+<p><img src="static/index/app_arch.png" alt="image"></p>
 <h2 id="navigation---go_router">Navigation - go_router</h2>
 <p>For navigation in the application, the <a href="https://pub.dev/packages/go_router">go_router</a> library is used. It is a declarative routing system built on top of the <a href="https://api.flutter.dev/flutter/widgets/Router-class.html">Flutter Router API</a>.</p>
 <p>The navigation map in the app looks like this:</p>

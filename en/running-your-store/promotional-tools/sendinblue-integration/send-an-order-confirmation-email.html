@@ -121,7 +121,7 @@
 <h5>Note</h5>
 <p>FIRSTNAME and LASTNAME should be existing attributes in your Sendinblue account.</p>
 </div>
-<p><img src="_static/send-an-order-confirmation-email/attribute-personalization.gif" alt="Attribute personalization"></p>
+<p><img src="static/send-an-order-confirmation-email/attribute-personalization.gif" alt="Attribute personalization"></p>
 <h3 id="personalize-your-email-with-the-order-details">Personalize your email with the order details</h3>
 <p>The following variables can be included directly within your Sendinblue template content:</p>
 <table>
@@ -198,7 +198,7 @@
 <li><code>{{ params.discount | floatformat: 2 }}</code> - the discount of the order</li>
 <li><code>{{ params.total | floatformat: 2 }}</code> - the total of the order</li>
 </ul>
-<p><img src="_static/send-an-order-confirmation-email/order.jpg" alt="Order summary"></p>
+<p><img src="static/send-an-order-confirmation-email/order.jpg" alt="Order summary"></p>
 <p>Now let's personalize the email template with ordered items. To do so, we're using the <em>New Template Language</em> to insert a dynamic list.</p>
 <h3 id="personalize-your-email-with-the-ordered-items-details">Personalize your email with the ordered items details</h3>
 <p>The following variables can be included directly from a dynamic list within your Sendinblue template content:</p>
@@ -260,7 +260,7 @@
 <li>In the <strong>variable</strong> field, type <code>item</code>.</li>
 <li>Set the limit for the number of items that will be displayed. For example, if there are 5 items, and you set 3 as the limit, only 3 items will be shown in the email.</li>
 </ol>
-<p><img src="_static/send-an-order-confirmation-email/items.jpg" alt="Items"></p>
+<p><img src="static/send-an-order-confirmation-email/items.jpg" alt="Items"></p>
 <p>Now add the variables to your email template. In the example above, we have added:</p>
 <ul>
 <li><code>{{ item.name }}</code> - the name of the item</li>
@@ -268,9 +268,9 @@
 <li><code>{{ item.price | floatformat: 2 }}</code> - the price of the item</li>
 </ul>
 <p>To add the link to the item, select the <strong>Call-To-Action (CTA)</strong> button. On the right sidebar, under <em>Link</em>, type <code>{{ item.url }}</code>.</p>
-<p><img src="_static/send-an-order-confirmation-email/item.jpg" alt="Item"></p>
+<p><img src="static/send-an-order-confirmation-email/item.jpg" alt="Item"></p>
 <p>To add the image of the item, select the image. On the right sidebar, under <em>Image source</em>, choose <em>From URL</em>, then type <code>{{ item.image }}</code>.</p>
-<p><img src="_static/send-an-order-confirmation-email/image.jpg" alt="Image"></p>
+<p><img src="static/send-an-order-confirmation-email/image.jpg" alt="Image"></p>
 <p>Once your design is complete, click the green <strong>Save &amp; Quit</strong> button. Then click the <strong>Save &amp; Activate</strong> button.</p>
 <h2 id="creating-the-order-confirmation-workflow">Creating the order confirmation workflow</h2>
 <div class="NOTE">
@@ -302,15 +302,15 @@
 </ul>
 </li>
 </ol>
-<p><img src="_static/send-an-order-confirmation-email/create-workflow.gif" alt="Create workflow"></p>
+<p><img src="static/send-an-order-confirmation-email/create-workflow.gif" alt="Create workflow"></p>
 <p>When your workflow is complete, click <strong>DONE</strong> to save and activate it.</p>
 <h2 id="example">Example</h2>
 <p>Let's say that customer Jean Blue jean.blue@sendinblue.com has purchased the following 3 items from your store.</p>
-<p><img src="_static/send-an-order-confirmation-email/order-items.jpg" alt="Order items"></p>
+<p><img src="static/send-an-order-confirmation-email/order-items.jpg" alt="Order items"></p>
 <p>Your template will look like this:</p>
-<p><img src="_static/send-an-order-confirmation-email/template.jpg" alt="Template"></p>
+<p><img src="static/send-an-order-confirmation-email/template.jpg" alt="Template"></p>
 <p>The email received by Jean Blue at jean.blue@sendinblue.com will look like this:</p>
-<p><img src="_static/send-an-order-confirmation-email/email.jpg" alt="Email"></p>
+<p><img src="static/send-an-order-confirmation-email/email.jpg" alt="Email"></p>
 <h2 id="learn-more">Learn more</h2>
 <ul>
 <li><a class="xref" href="recover-abandoned-carts.html">Recover abandoned carts</a></li>

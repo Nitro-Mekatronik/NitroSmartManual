@@ -114,7 +114,7 @@
 <li><a href="#database-naming-convention">Database naming convention</a></li>
 </ul>
 <h2 id="customers-info">Customers info</h2>
-<p><img src="_static/db-schema/customers-info.jpg" alt="Customers info"></p>
+<p><img src="static/db-schema/customers-info.jpg" alt="Customers info"></p>
 <p>This diagram shows a set of tables that contain basic customer information. It also indicates the direction of links.</p>
 <p>We won't delve into the purpose of tables and fields, since their names are self-descriptive enough.</p>
 <h3 id="features-customers-info">Features (Customers info)</h3>
@@ -129,47 +129,47 @@
 </li>
 <li><p>Some of the user data is stored in the <strong>GenericAttribute</strong> table. You can find all of them at <code>\src\Libraries\Nop.Core\Domain\Customers\NopCustomerDefaults.cs</code>.</p>
 <p>The structure of this table is presented below:</p>
-<p><img src="_static/db-schema/generic-attribute.jpg" alt="GenericAttribute"></p>
+<p><img src="static/db-schema/generic-attribute.jpg" alt="GenericAttribute"></p>
 <p>Besides the mentioned customer data, this table can store any data for other entities as well. We added this table on purpose so that you could extend any entity without changing the structure of the tables.</p>
 <p>Additionally, this table stores custom <strong>Customer attributes</strong> and <strong>Vendor attributes</strong> with the chosen values for vendors and customers in the XML format. See the following rows to understand what it looks like:</p>
-<p><img src="_static/db-schema/xml.jpg" alt="Xml"></p>
+<p><img src="static/db-schema/xml.jpg" alt="Xml"></p>
 <p>On the example of the XML string from the <em>Value</em> column we can see how exactly the attribute values are stored for a certain vendor:</p>
 <pre><code class="lang-csharp">&lt;Attributes&gt;&lt;VendorAttribute ID=&quot;2&quot;&gt;&lt;VendorAttributeValue&gt;&lt;Value&gt;1&lt;/Value&gt;&lt;/VendorAttributeValue&gt;&lt;/VendorAttribute&gt;&lt;/Attributes&gt;
 </code></pre>
 <p>As you can see the vendor with ID 1 has only one vendor attribute filled. This attribute has ID 2 and its value is 1.</p>
 <p>Custom customer attributes have the same structure as vendor attributes. The following screenshot represents the relationships between <strong>Customer attributes</strong> and <strong>Vendor attributes</strong> and their values:</p>
-<p><img src="_static/db-schema/attributes.jpg" alt="Xml"></p>
+<p><img src="static/db-schema/attributes.jpg" alt="Xml"></p>
 </li>
 </ul>
 <h2 id="products-info">Products info</h2>
-<p><img src="_static/db-schema/products-info.jpg" alt="Products info"></p>
+<p><img src="static/db-schema/products-info.jpg" alt="Products info"></p>
 <p>In the diagram, you can see the base data for the product (the schema of the product information table below). As a rule, this data is used in 99% of cases.</p>
-<p><img src="_static/db-schema/product.png" alt="Product table"></p>
+<p><img src="static/db-schema/product.png" alt="Product table"></p>
 <h3 id="features-products-info">Features (Products info)</h3>
 <p>Depending on the store settings, additional tables may be connected to this scheme. For example, to distribute product quantity among multiple warehouses.</p>
-<p><img src="_static/db-schema/warehouse.jpg" alt="Product table"></p>
+<p><img src="static/db-schema/warehouse.jpg" alt="Product table"></p>
 <p>Or if you want to use the product reviews functionality:</p>
-<p><img src="_static/db-schema/product-review.jpg" alt="Product table"></p>
+<p><img src="static/db-schema/product-review.jpg" alt="Product table"></p>
 <h3 id="product-attributes">Product attributes</h3>
 <p>Then let's consider the scheme of attributes and their combinations presented below:</p>
-<p><img src="_static/db-schema/product-attributes.jpg" alt="Product attributes"></p>
+<p><img src="static/db-schema/product-attributes.jpg" alt="Product attributes"></p>
 <h3 id="tier-price">Tier price</h3>
 <p>If you use tier pricing for products you should also pay attention to the following scheme:</p>
-<p><img src="_static/db-schema/tier-price.jpg" alt="Tier price"></p>
+<p><img src="static/db-schema/tier-price.jpg" alt="Tier price"></p>
 <h3 id="inventory-by-warehouses">Inventory by warehouses</h3>
 <p>Although this feature is not used often, it might be useful to give a scheme for accounting for goods in a particular warehouse:</p>
-<p><img src="_static/db-schema/stock-quantity-history.jpg" alt="Inventory by warehouses"></p>
+<p><img src="static/db-schema/stock-quantity-history.jpg" alt="Inventory by warehouses"></p>
 <h2 id="orders">Orders</h2>
-<p><img src="_static/db-schema/orders.jpg" alt="orders"></p>
+<p><img src="static/db-schema/orders.jpg" alt="orders"></p>
 <p>In this diagram, we can see the tables related to the order data. The <strong>Order</strong> table has the following structure:</p>
-<p><img src="_static/db-schema/order.png" alt="order"></p>
+<p><img src="static/db-schema/order.png" alt="order"></p>
 <p>There is no need to comment on anything since everything should be clear from the diagram and the names of the fields are self-descriptive enough. It should only be noted that the <strong>RewardPointsHistory</strong> table is used only if the <em>Reward points system</em> is activated for the store.</p>
 <h2 id="shipments">Shipments</h2>
-<p><img src="_static/db-schema/shipments.jpg" alt="shipments"></p>
+<p><img src="static/db-schema/shipments.jpg" alt="shipments"></p>
 <p>The purpose of all tables in the diagram, as before, raises no questions. Nevertheless, let's dwell on a few points. The <strong>ShippingMethod</strong> table is used to manage the list of connected plugins, and the specific shipping method is stored in the <em>ShippingRateComputationMethodSystemName</em> and <em>ShippingMethod</em> fields of the <strong>Order</strong> table.</p>
 <p>The <em>OrderItemId</em> field of the <strong>ShipmentItem</strong> table is essentially a reference to the <strong>OrderItem</strong> table.</p>
 <h2 id="discounts">Discounts</h2>
-<p><img src="_static/db-schema/discounts.jpg" alt="discounts"></p>
+<p><img src="static/db-schema/discounts.jpg" alt="discounts"></p>
 <p>From the diagram above, we can see that discounts can be applied to three groups: <strong>Products</strong>, <strong>Manufacturers</strong>, <strong>Categories</strong>
 And can be configured with various rules which are controlled by plugins (<code>IDiscountRequirementRule</code>).</p>
 <p>In the <strong>DiscountRequirement</strong> table, the <em>InteractionTypeId</em> field must contain one of the values specified in the <code>RequirementGroupInteractionType</code> enumeration:</p>
@@ -191,7 +191,7 @@ public enum RequirementGroupInteractionType
 </code></pre>
 <h2 id="shopping-cart">Shopping cart</h2>
 <p>Another important part of the store is a shopping cart. In our case the scheme of this mechanism is very simple:</p>
-<p><img src="_static/db-schema/shopping-cart-item.jpg" alt="Shopping cart"></p>
+<p><img src="static/db-schema/shopping-cart-item.jpg" alt="Shopping cart"></p>
 <p>The only thing worth noting is that this scheme is also used for a wishlist. To separate these two types, the <em>ShoppingCartTypeId</em> field is used. The values in this field must match the values from the <strong>ShoppingCartType</strong> enumeration:</p>
 <pre><code class="lang-csharp">/// &lt;summary&gt;
 /// Represents a shopping cart type
@@ -211,7 +211,7 @@ public enum ShoppingCartType
 </code></pre>
 <h2 id="addresses">Addresses</h2>
 <p>Perhaps you will also be interested in the table schema involved in storing addresses, both delivery, and the customer addresses:</p>
-<p><img src="_static/db-schema/addresses.jpg" alt="addresses"></p>
+<p><img src="static/db-schema/addresses.jpg" alt="addresses"></p>
 <p>As you understand, the standard installation includes much more tables. We don't describe them all, since many of them have no connections and serve only for a specific purpose, while others are used very rarely.</p>
 <h2 id="database-naming-convention">Database naming convention</h2>
 <p>You may have noticed that the database uses a mixed approach to naming of tables and columns (with <code>_</code> char, without <code>_</code>, CamelCase). Long time ago we used <code>_</code> char. But now we've completely switched to using <strong>CamelCase</strong> notation. But we decide not to change names of the existing tables or columns because many of our users already could write a huge amount of their custom scripts that would inevitably stop working.</p>
